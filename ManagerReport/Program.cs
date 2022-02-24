@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Threading;
 
 namespace ManagerReport
@@ -8,22 +9,28 @@ namespace ManagerReport
         private static bool keepRunning = true;
         static void Main(string[] args)
         {
+            var serviceCollection = new ServiceCollection();
+            ConfigureService(serviceCollection);
+            var serviceProvider = serviceCollection.BuildServiceProvider();
+            var eventService = serviceProvider.GetService<Services.IReportByDates>();
+            Console.WriteLine("Iniciando a aplicação");
+            Console.WriteLine("Precione Ctrl+c para sair da aplicação");
+
             Console.CancelKeyPress += delegate (object sender, ConsoleCancelEventArgs e) {
                 e.Cancel = true;
                 keepRunning = false;
             };
-            Console.WriteLine("Precione Ctrl+c para sair da aplicação");
+            
             while (keepRunning)
             {
-                Console.WriteLine("Data de inicio do relatorio com o fomrato 'AAAA-MM-DD 00:00:00'");
-                var data = Console.ReadLine();
-                Console.WriteLine(data);
-                Thread.Sleep(2000);
-                Console.Clear();
+                eventService.Generate();
             }
             Console.WriteLine("Fechando aplicação...");
             
             
+        }
+        public static void ConfigureService(IServiceCollection services) {
+            services.AddScoped<Services.IReportByDates, Services.ReportByDatesService>();
         }
     }
 }
