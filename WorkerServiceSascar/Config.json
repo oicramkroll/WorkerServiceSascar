@@ -1,0 +1,10 @@
+{
+  "horarioRotina": "06:00",
+  "DiretorioDestino": "c:\\temp",
+  //o relatorio com as datas a baixo será executado quando a propriedade "Executar" for alterada para true
+  //e ao fim da execução a propriedade será automaticamente false, assim garantido que o relátorio não seja executado constantemente,
+  //ATENÇÂO!!!! esta ação pode demorar muito tempo.
+  "dataInicio": "2022-01-01 00:00:00",
+  "dataFim": "2022-01-01 00:00:00",
+  "Executar": false
+}
