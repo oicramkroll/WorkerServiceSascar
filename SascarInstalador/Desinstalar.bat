@@ -9,4 +9,5 @@ if errorlevel 1 (
 
 sc.exe delete "svc worker sascar"
 rmdir /S /Q "c:\sascarService"
+del /S /Q "%USERPROFILE%\Desktop\SasCarReport.lnk"
 pause "servico removido"

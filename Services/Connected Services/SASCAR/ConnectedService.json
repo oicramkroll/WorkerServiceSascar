@@ -4,12 +4,13 @@
       "http://sasintegra.sascar.com.br/SasIntegra/SasIntegraWSService?wsdl"
     ],
     "collectionTypes": [
-      "System.Array",
-      "System.Collections.Generic.Dictionary`2"
+      "System.Collections.Generic.Dictionary`2",
+      "System.Collections.Generic.List`1"
     ],
     "namespaceMappings": [
       "*, SASCAR"
     ],
+    "sync": true,
     "targetFramework": "netcoreapp3.1",
     "typeReuseMode": "None"
   }

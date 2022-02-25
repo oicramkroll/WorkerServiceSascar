@@ -64,590 +64,1102 @@ namespace SASCAR
     public interface SasIntegraWS
     {
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/atualizarSenhaRequest" +
             "", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/atualizarSenhaRespons" +
             "e")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/atualizarSenha/Fault/" +
             "SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.atualizarSenhaResponse atualizarSenha(SASCAR.atualizarSenhaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/atualizarSenhaRequest" +
+            "", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/atualizarSenhaRespons" +
+            "e")]
         System.Threading.Tasks.Task<SASCAR.atualizarSenhaResponse> atualizarSenhaAsync(SASCAR.atualizarSenhaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getSmartCamerasEvents" +
             "Request", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getSmartCamerasEvents" +
             "Response")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getSmartCamerasEvents" +
             "/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.getSmartCamerasEventsResponse getSmartCamerasEvents(SASCAR.getSmartCamerasEventsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getSmartCamerasEvents" +
+            "Request", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getSmartCamerasEvents" +
+            "Response")]
         System.Threading.Tasks.Task<SASCAR.getSmartCamerasEventsResponse> getSmartCamerasEventsAsync(SASCAR.getSmartCamerasEventsRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterClientesRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterClientesResponse" +
             "")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterClientes/Fault/S" +
             "asIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterClientesResponse obterClientes(SASCAR.obterClientesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterClientesRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterClientesResponse" +
+            "")]
         System.Threading.Tasks.Task<SASCAR.obterClientesResponse> obterClientesAsync(SASCAR.obterClientesRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasReques" +
             "t", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasRespon" +
             "se")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristas/Fault" +
             "/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterMotoristasResponse obterMotoristas(SASCAR.obterMotoristasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasReques" +
+            "t", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasRespon" +
+            "se")]
         System.Threading.Tasks.Task<SASCAR.obterMotoristasResponse> obterMotoristasAsync(SASCAR.obterMotoristasRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasVeicul" +
             "osRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasVeicul" +
             "osResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasVeicul" +
             "os/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterMotoristasVeiculosResponse obterMotoristasVeiculos(SASCAR.obterMotoristasVeiculosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasVeicul" +
+            "osRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasVeicul" +
+            "osResponse")]
         System.Threading.Tasks.Task<SASCAR.obterMotoristasVeiculosResponse> obterMotoristasVeiculosAsync(SASCAR.obterMotoristasVeiculosRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasPorVei" +
             "culoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasPorVei" +
             "culoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasPorVei" +
             "culo/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterMotoristasPorVeiculoResponse obterMotoristasPorVeiculo(SASCAR.obterMotoristasPorVeiculoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasPorVei" +
+            "culoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMotoristasPorVei" +
+            "culoResponse")]
         System.Threading.Tasks.Task<SASCAR.obterMotoristasPorVeiculoResponse> obterMotoristasPorVeiculoAsync(SASCAR.obterMotoristasPorVeiculoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutTecladoVei" +
             "culosRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutTecladoVei" +
             "culosResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutTecladoVei" +
             "culos/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterLayoutTecladoVeiculosResponse obterLayoutTecladoVeiculos(SASCAR.obterLayoutTecladoVeiculosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutTecladoVei" +
+            "culosRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutTecladoVei" +
+            "culosResponse")]
         System.Threading.Tasks.Task<SASCAR.obterLayoutTecladoVeiculosResponse> obterLayoutTecladoVeiculosAsync(SASCAR.obterLayoutTecladoVeiculosRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutGrupoPonto" +
             "sRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutGrupoPonto" +
             "sResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutGrupoPonto" +
             "s/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterLayoutGrupoPontosResponse obterLayoutGrupoPontos(SASCAR.obterLayoutGrupoPontosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutGrupoPonto" +
+            "sRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutGrupoPonto" +
+            "sResponse")]
         System.Threading.Tasks.Task<SASCAR.obterLayoutGrupoPontosResponse> obterLayoutGrupoPontosAsync(SASCAR.obterLayoutGrupoPontosRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterGrupoAtuadoresRe" +
             "quest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterGrupoAtuadoresRe" +
             "sponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterGrupoAtuadores/F" +
             "ault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterGrupoAtuadoresResponse obterGrupoAtuadores(SASCAR.obterGrupoAtuadoresRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterGrupoAtuadoresRe" +
+            "quest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterGrupoAtuadoresRe" +
+            "sponse")]
         System.Threading.Tasks.Task<SASCAR.obterGrupoAtuadoresResponse> obterGrupoAtuadoresAsync(SASCAR.obterGrupoAtuadoresRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterStatusComandoReq" +
             "uest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterStatusComandoRes" +
             "ponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterStatusComando/Fa" +
             "ult/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterStatusComandoResponse obterStatusComando(SASCAR.obterStatusComandoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterStatusComandoReq" +
+            "uest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterStatusComandoRes" +
+            "ponse")]
         System.Threading.Tasks.Task<SASCAR.obterStatusComandoResponse> obterStatusComandoAsync(SASCAR.obterStatusComandoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterStatusComandoTic" +
             "ketSascarRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterStatusComandoTic" +
             "ketSascarResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterStatusComandoTic" +
             "ketSascar/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterStatusComandoTicketSascarResponse obterStatusComandoTicketSascar(SASCAR.obterStatusComandoTicketSascarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterStatusComandoTic" +
+            "ketSascarRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterStatusComandoTic" +
+            "ketSascarResponse")]
         System.Threading.Tasks.Task<SASCAR.obterStatusComandoTicketSascarResponse> obterStatusComandoTicketSascarAsync(SASCAR.obterStatusComandoTicketSascarRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTipoComandoReque" +
             "st", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTipoComandoRespo" +
             "nse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTipoComando/Faul" +
             "t/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterTipoComandoResponse obterTipoComando(SASCAR.obterTipoComandoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTipoComandoReque" +
+            "st", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTipoComandoRespo" +
+            "nse")]
         System.Threading.Tasks.Task<SASCAR.obterTipoComandoResponse> obterTipoComandoAsync(SASCAR.obterTipoComandoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRe" +
             "quest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRe" +
             "sponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoes/F" +
             "ault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicoesResponse obterPacotePosicoes(SASCAR.obterPacotePosicoesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRe" +
+            "quest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRe" +
+            "sponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesResponse> obterPacotePosicoesAsync(SASCAR.obterPacotePosicoesRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesCo" +
             "mPlacaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesCo" +
             "mPlacaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesCo" +
             "mPlaca/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicoesComPlacaResponse obterPacotePosicoesComPlaca(SASCAR.obterPacotePosicoesComPlacaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesCo" +
+            "mPlacaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesCo" +
+            "mPlacaResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesComPlacaResponse> obterPacotePosicoesComPlacaAsync(SASCAR.obterPacotePosicoesComPlacaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
             "toristaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
             "toristaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
             "torista/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicoesMotoristaResponse obterPacotePosicoesMotorista(SASCAR.obterPacotePosicoesMotoristaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
+            "toristaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
+            "toristaResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesMotoristaResponse> obterPacotePosicoesMotoristaAsync(SASCAR.obterPacotePosicoesMotoristaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
             "toristaComPlacaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
             "toristaComPlacaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
             "toristaComPlaca/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicoesMotoristaComPlacaResponse obterPacotePosicoesMotoristaComPlaca(SASCAR.obterPacotePosicoesMotoristaComPlacaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
+            "toristaComPlacaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
+            "toristaComPlacaResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesMotoristaComPlacaResponse> obterPacotePosicoesMotoristaComPlacaAsync(SASCAR.obterPacotePosicoesMotoristaComPlacaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRe" +
             "stricaoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRe" +
             "stricaoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRe" +
             "stricao/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicoesRestricaoResponse obterPacotePosicoesRestricao(SASCAR.obterPacotePosicoesRestricaoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRe" +
+            "stricaoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRe" +
+            "stricaoResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesRestricaoResponse> obterPacotePosicoesRestricaoAsync(SASCAR.obterPacotePosicoesRestricaoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
             "toristaRestricaoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
             "toristaRestricaoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
             "toristaRestricao/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicoesMotoristaRestricaoResponse obterPacotePosicoesMotoristaRestricao(SASCAR.obterPacotePosicoesMotoristaRestricaoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
+            "toristaRestricaoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
+            "toristaRestricaoResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesMotoristaRestricaoResponse> obterPacotePosicoesMotoristaRestricaoAsync(SASCAR.obterPacotePosicoesMotoristaRestricaoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRF" +
             "NacionalRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRF" +
             "NacionalResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRF" +
             "Nacional/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicoesRFNacionalResponse obterPacotePosicoesRFNacional(SASCAR.obterPacotePosicoesRFNacionalRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRF" +
+            "NacionalRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesRF" +
+            "NacionalResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesRFNacionalResponse> obterPacotePosicoesRFNacionalAsync(SASCAR.obterPacotePosicoesRFNacionalRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesJS" +
             "ONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesJS" +
             "ONResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesJS" +
             "ON/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicoesJSONResponse obterPacotePosicoesJSON(SASCAR.obterPacotePosicoesJSONRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesJS" +
+            "ONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesJS" +
+            "ONResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesJSONResponse> obterPacotePosicoesJSONAsync(SASCAR.obterPacotePosicoesJSONRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesJS" +
             "ONComPlacaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesJS" +
             "ONComPlacaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesJS" +
             "ONComPlaca/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicoesJSONComPlacaResponse obterPacotePosicoesJSONComPlaca(SASCAR.obterPacotePosicoesJSONComPlacaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesJS" +
+            "ONComPlacaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesJS" +
+            "ONComPlacaResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesJSONComPlacaResponse> obterPacotePosicoesJSONComPlacaAsync(SASCAR.obterPacotePosicoesJSONComPlacaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
             "toristaJSONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
             "toristaJSONResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
             "toristaJSON/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicoesMotoristaJSONResponse obterPacotePosicoesMotoristaJSON(SASCAR.obterPacotePosicoesMotoristaJSONRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
+            "toristaJSONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicoesMo" +
+            "toristaJSONResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesMotoristaJSONResponse> obterPacotePosicoesMotoristaJSONAsync(SASCAR.obterPacotePosicoesMotoristaJSONRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoPor" +
             "RangeJSONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoPor" +
             "RangeJSONResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoPor" +
             "RangeJSON/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicaoPorRangeJSONResponse obterPacotePosicaoPorRangeJSON(SASCAR.obterPacotePosicaoPorRangeJSONRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoPor" +
+            "RangeJSONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoPor" +
+            "RangeJSONResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicaoPorRangeJSONResponse> obterPacotePosicaoPorRangeJSONAsync(SASCAR.obterPacotePosicaoPorRangeJSONRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
             "oristaPorRangeJSONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
             "oristaPorRangeJSONResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
             "oristaPorRangeJSON/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicaoMotoristaPorRangeJSONResponse obterPacotePosicaoMotoristaPorRangeJSON(SASCAR.obterPacotePosicaoMotoristaPorRangeJSONRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
+            "oristaPorRangeJSONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
+            "oristaPorRangeJSONResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicaoMotoristaPorRangeJSONResponse> obterPacotePosicaoMotoristaPorRangeJSONAsync(SASCAR.obterPacotePosicaoMotoristaPorRangeJSONRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoPor" +
             "RangeRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoPor" +
             "RangeResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoPor" +
             "Range/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicaoPorRangeResponse obterPacotePosicaoPorRange(SASCAR.obterPacotePosicaoPorRangeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoPor" +
+            "RangeRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoPor" +
+            "RangeResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicaoPorRangeResponse> obterPacotePosicaoPorRangeAsync(SASCAR.obterPacotePosicaoPorRangeRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
             "oristaPorRangeRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
             "oristaPorRangeResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
             "oristaPorRange/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicaoMotoristaPorRangeResponse obterPacotePosicaoMotoristaPorRange(SASCAR.obterPacotePosicaoMotoristaPorRangeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
+            "oristaPorRangeRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
+            "oristaPorRangeResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicaoMotoristaPorRangeResponse> obterPacotePosicaoMotoristaPorRangeAsync(SASCAR.obterPacotePosicaoMotoristaPorRangeRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoHis" +
             "toricoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoHis" +
             "toricoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoHis" +
             "torico/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicaoHistoricoResponse obterPacotePosicaoHistorico(SASCAR.obterPacotePosicaoHistoricoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoHis" +
+            "toricoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoHis" +
+            "toricoResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicaoHistoricoResponse> obterPacotePosicaoHistoricoAsync(SASCAR.obterPacotePosicaoHistoricoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
             "oristaHistoricoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
             "oristaHistoricoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
             "oristaHistorico/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacotePosicaoMotoristaHistoricoResponse obterPacotePosicaoMotoristaHistorico(SASCAR.obterPacotePosicaoMotoristaHistoricoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
+            "oristaHistoricoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacotePosicaoMot" +
+            "oristaHistoricoResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicaoMotoristaHistoricoResponse> obterPacotePosicaoMotoristaHistoricoAsync(SASCAR.obterPacotePosicaoMotoristaHistoricoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacoteLocalizaca" +
             "oRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacoteLocalizaca" +
             "oResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacoteLocalizaca" +
             "o/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacoteLocalizacaoResponse obterPacoteLocalizacao(SASCAR.obterPacoteLocalizacaoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacoteLocalizaca" +
+            "oRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacoteLocalizaca" +
+            "oResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacoteLocalizacaoResponse> obterPacoteLocalizacaoAsync(SASCAR.obterPacoteLocalizacaoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50TmcdReq" +
             "uest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50TmcdRes" +
             "ponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50Tmcd/Fa" +
             "ult/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterMacroTd50TmcdResponse obterMacroTd50Tmcd(SASCAR.obterMacroTd50TmcdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50TmcdReq" +
+            "uest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50TmcdRes" +
+            "ponse")]
         System.Threading.Tasks.Task<SASCAR.obterMacroTd50TmcdResponse> obterMacroTd50TmcdAsync(SASCAR.obterMacroTd50TmcdRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50TmcdDet" +
             "alhadoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50TmcdDet" +
             "alhadoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50TmcdDet" +
             "alhado/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterMacroTd50TmcdDetalhadoResponse obterMacroTd50TmcdDetalhado(SASCAR.obterMacroTd50TmcdDetalhadoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50TmcdDet" +
+            "alhadoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd50TmcdDet" +
+            "alhadoResponse")]
         System.Threading.Tasks.Task<SASCAR.obterMacroTd50TmcdDetalhadoResponse> obterMacroTd50TmcdDetalhadoAsync(SASCAR.obterMacroTd50TmcdDetalhadoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd40Request" +
             "", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd40Respons" +
             "e")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd40/Fault/" +
             "SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterMacroTd40Response obterMacroTd40(SASCAR.obterMacroTd40Request request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd40Request" +
+            "", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTd40Respons" +
+            "e")]
         System.Threading.Tasks.Task<SASCAR.obterMacroTd40Response> obterMacroTd40Async(SASCAR.obterMacroTd40Request request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTms3Request" +
             "", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTms3Respons" +
             "e")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTms3/Fault/" +
             "SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterMacroTms3Response obterMacroTms3(SASCAR.obterMacroTms3Request request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTms3Request" +
+            "", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMacroTms3Respons" +
+            "e")]
         System.Threading.Tasks.Task<SASCAR.obterMacroTms3Response> obterMacroTms3Async(SASCAR.obterMacroTms3Request request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMascaraDispositi" +
             "vosRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMascaraDispositi" +
             "vosResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMascaraDispositi" +
             "vos/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterMascaraDispositivosResponse obterMascaraDispositivos(SASCAR.obterMascaraDispositivosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMascaraDispositi" +
+            "vosRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMascaraDispositi" +
+            "vosResponse")]
         System.Threading.Tasks.Task<SASCAR.obterMascaraDispositivosResponse> obterMascaraDispositivosAsync(SASCAR.obterMascaraDispositivosRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayout/Fault/Sas" +
             "IntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterLayoutResponse obterLayout(SASCAR.obterLayoutRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutResponse")]
         System.Threading.Tasks.Task<SASCAR.obterLayoutResponse> obterLayoutAsync(SASCAR.obterLayoutRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutDataReques" +
             "t", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutDataRespon" +
             "se")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutData/Fault" +
             "/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterLayoutDataResponse obterLayoutData(SASCAR.obterLayoutDataRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutDataReques" +
+            "t", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutDataRespon" +
+            "se")]
         System.Threading.Tasks.Task<SASCAR.obterLayoutDataResponse> obterLayoutDataAsync(SASCAR.obterLayoutDataRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutDetalhadoR" +
             "equest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutDetalhadoR" +
             "esponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutDetalhado/" +
             "Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterLayoutDetalhadoResponse obterLayoutDetalhado(SASCAR.obterLayoutDetalhadoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutDetalhadoR" +
+            "equest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutDetalhadoR" +
+            "esponse")]
         System.Threading.Tasks.Task<SASCAR.obterLayoutDetalhadoResponse> obterLayoutDetalhadoAsync(SASCAR.obterLayoutDetalhadoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosResponse" +
             "")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculos/Fault/S" +
             "asIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterVeiculosResponse obterVeiculos(SASCAR.obterVeiculosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosResponse" +
+            "")]
         System.Threading.Tasks.Task<SASCAR.obterVeiculosResponse> obterVeiculosAsync(SASCAR.obterVeiculosRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutAreaAvdReq" +
             "uest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutAreaAvdRes" +
             "ponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutAreaAvd/Fa" +
             "ult/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterLayoutAreaAvdResponse obterLayoutAreaAvd(SASCAR.obterLayoutAreaAvdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutAreaAvdReq" +
+            "uest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutAreaAvdRes" +
+            "ponse")]
         System.Threading.Tasks.Task<SASCAR.obterLayoutAreaAvdResponse> obterLayoutAreaAvdAsync(SASCAR.obterLayoutAreaAvdRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosRFNacion" +
             "alRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosRFNacion" +
             "alResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosRFNacion" +
             "al/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterVeiculosRFNacionalResponse obterVeiculosRFNacional(SASCAR.obterVeiculosRFNacionalRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosRFNacion" +
+            "alRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosRFNacion" +
+            "alResponse")]
         System.Threading.Tasks.Task<SASCAR.obterVeiculosRFNacionalResponse> obterVeiculosRFNacionalAsync(SASCAR.obterVeiculosRFNacionalRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosJsonRequ" +
             "est", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosJsonResp" +
             "onse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosJson/Fau" +
             "lt/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterVeiculosJsonResponse obterVeiculosJson(SASCAR.obterVeiculosJsonRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosJsonRequ" +
+            "est", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterVeiculosJsonResp" +
+            "onse")]
         System.Threading.Tasks.Task<SASCAR.obterVeiculosJsonResponse> obterVeiculosJsonAsync(SASCAR.obterVeiculosJsonRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPontosReferencia" +
             "Request", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPontosReferencia" +
             "Response")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPontosReferencia" +
             "/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPontosReferenciaResponse obterPontosReferencia(SASCAR.obterPontosReferenciaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPontosReferencia" +
+            "Request", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPontosReferencia" +
+            "Response")]
         System.Threading.Tasks.Task<SASCAR.obterPontosReferenciaResponse> obterPontosReferenciaAsync(SASCAR.obterPontosReferenciaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterSequenciamentoEv" +
             "entoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterSequenciamentoEv" +
             "entoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterSequenciamentoEv" +
             "ento/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterSequenciamentoEventoResponse obterSequenciamentoEvento(SASCAR.obterSequenciamentoEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterSequenciamentoEv" +
+            "entoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterSequenciamentoEv" +
+            "entoResponse")]
         System.Threading.Tasks.Task<SASCAR.obterSequenciamentoEventoResponse> obterSequenciamentoEventoAsync(SASCAR.obterSequenciamentoEventoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMensagemPortalRe" +
             "quest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMensagemPortalRe" +
             "sponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMensagemPortal/F" +
             "ault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterMensagemPortalResponse obterMensagemPortal(SASCAR.obterMensagemPortalRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMensagemPortalRe" +
+            "quest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterMensagemPortalRe" +
+            "sponse")]
         System.Threading.Tasks.Task<SASCAR.obterMensagemPortalResponse> obterMensagemPortalAsync(SASCAR.obterMensagemPortalRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTelemetriaPortal" +
             "Request", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTelemetriaPortal" +
             "Response")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTelemetriaPortal" +
             "/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterTelemetriaPortalResponse obterTelemetriaPortal(SASCAR.obterTelemetriaPortalRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTelemetriaPortal" +
+            "Request", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterTelemetriaPortal" +
+            "Response")]
         System.Threading.Tasks.Task<SASCAR.obterTelemetriaPortalResponse> obterTelemetriaPortalAsync(SASCAR.obterTelemetriaPortalRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEnderecoPosicaoR" +
             "equest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEnderecoPosicaoR" +
             "esponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEnderecoPosicao/" +
             "Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterEnderecoPosicaoResponse obterEnderecoPosicao(SASCAR.obterEnderecoPosicaoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEnderecoPosicaoR" +
+            "equest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEnderecoPosicaoR" +
+            "esponse")]
         System.Threading.Tasks.Task<SASCAR.obterEnderecoPosicaoResponse> obterEnderecoPosicaoAsync(SASCAR.obterEnderecoPosicaoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/verificarVeiculoInteg" +
             "radoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/verificarVeiculoInteg" +
             "radoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/verificarVeiculoInteg" +
             "rado/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.verificarVeiculoIntegradoResponse verificarVeiculoIntegrado(SASCAR.verificarVeiculoIntegradoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/verificarVeiculoInteg" +
+            "radoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/verificarVeiculoInteg" +
+            "radoResponse")]
         System.Threading.Tasks.Task<SASCAR.verificarVeiculoIntegradoResponse> verificarVeiculoIntegradoAsync(SASCAR.verificarVeiculoIntegradoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutAcaoEmbarc" +
             "adaAVDRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutAcaoEmbarc" +
             "adaAVDResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutAcaoEmbarc" +
             "adaAVD/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterLayoutAcaoEmbarcadaAVDResponse obterLayoutAcaoEmbarcadaAVD(SASCAR.obterLayoutAcaoEmbarcadaAVDRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutAcaoEmbarc" +
+            "adaAVDRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterLayoutAcaoEmbarc" +
+            "adaAVDResponse")]
         System.Threading.Tasks.Task<SASCAR.obterLayoutAcaoEmbarcadaAVDResponse> obterLayoutAcaoEmbarcadaAVDAsync(SASCAR.obterLayoutAcaoEmbarcadaAVDRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/comandoEmbarquePontoD" +
             "iarioRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/comandoEmbarquePontoD" +
             "iarioResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/comandoEmbarquePontoD" +
             "iario/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.comandoEmbarquePontoDiarioResponse comandoEmbarquePontoDiario(SASCAR.comandoEmbarquePontoDiarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/comandoEmbarquePontoD" +
+            "iarioRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/comandoEmbarquePontoD" +
+            "iarioResponse")]
         System.Threading.Tasks.Task<SASCAR.comandoEmbarquePontoDiarioResponse> comandoEmbarquePontoDiarioAsync(SASCAR.comandoEmbarquePontoDiarioRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
             "DescricaoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
             "DescricaoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
             "Descricao/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterEventoTelemetriaDescricaoResponse obterEventoTelemetriaDescricao(SASCAR.obterEventoTelemetriaDescricaoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
+            "DescricaoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
+            "DescricaoResponse")]
         System.Threading.Tasks.Task<SASCAR.obterEventoTelemetriaDescricaoResponse> obterEventoTelemetriaDescricaoAsync(SASCAR.obterEventoTelemetriaDescricaoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
             "IntegracaoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
             "IntegracaoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
             "Integracao/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterEventoTelemetriaIntegracaoResponse obterEventoTelemetriaIntegracao(SASCAR.obterEventoTelemetriaIntegracaoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
+            "IntegracaoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
+            "IntegracaoResponse")]
         System.Threading.Tasks.Task<SASCAR.obterEventoTelemetriaIntegracaoResponse> obterEventoTelemetriaIntegracaoAsync(SASCAR.obterEventoTelemetriaIntegracaoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
             "IntegracaoDataChegadaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
             "IntegracaoDataChegadaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
             "IntegracaoDataChegada/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterEventoTelemetriaIntegracaoDataChegadaResponse obterEventoTelemetriaIntegracaoDataChegada(SASCAR.obterEventoTelemetriaIntegracaoDataChegadaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
+            "IntegracaoDataChegadaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventoTelemetria" +
+            "IntegracaoDataChegadaResponse")]
         System.Threading.Tasks.Task<SASCAR.obterEventoTelemetriaIntegracaoDataChegadaResponse> obterEventoTelemetriaIntegracaoDataChegadaAsync(SASCAR.obterEventoTelemetriaIntegracaoDataChegadaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
             "ntegracaoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
             "ntegracaoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
             "ntegracao/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterDeltaTelemetriaIntegracaoResponse obterDeltaTelemetriaIntegracao(SASCAR.obterDeltaTelemetriaIntegracaoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
+            "ntegracaoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
+            "ntegracaoResponse")]
         System.Threading.Tasks.Task<SASCAR.obterDeltaTelemetriaIntegracaoResponse> obterDeltaTelemetriaIntegracaoAsync(SASCAR.obterDeltaTelemetriaIntegracaoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
             "ntegracaoDataChegadaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
             "ntegracaoDataChegadaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
             "ntegracaoDataChegada/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterDeltaTelemetriaIntegracaoDataChegadaResponse obterDeltaTelemetriaIntegracaoDataChegada(SASCAR.obterDeltaTelemetriaIntegracaoDataChegadaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
+            "ntegracaoDataChegadaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
+            "ntegracaoDataChegadaResponse")]
         System.Threading.Tasks.Task<SASCAR.obterDeltaTelemetriaIntegracaoDataChegadaResponse> obterDeltaTelemetriaIntegracaoDataChegadaAsync(SASCAR.obterDeltaTelemetriaIntegracaoDataChegadaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/enviarParametrizacaoT" +
             "elemetriaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/enviarParametrizacaoT" +
             "elemetriaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/enviarParametrizacaoT" +
             "elemetria/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.enviarParametrizacaoTelemetriaResponse enviarParametrizacaoTelemetria(SASCAR.enviarParametrizacaoTelemetriaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/enviarParametrizacaoT" +
+            "elemetriaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/enviarParametrizacaoT" +
+            "elemetriaResponse")]
         System.Threading.Tasks.Task<SASCAR.enviarParametrizacaoTelemetriaResponse> enviarParametrizacaoTelemetriaAsync(SASCAR.enviarParametrizacaoTelemetriaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDadosAdicionaisR" +
             "equest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDadosAdicionaisR" +
             "esponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDadosAdicionais/" +
             "Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterDadosAdicionaisResponse obterDadosAdicionais(SASCAR.obterDadosAdicionaisRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDadosAdicionaisR" +
+            "equest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDadosAdicionaisR" +
+            "esponse")]
         System.Threading.Tasks.Task<SASCAR.obterDadosAdicionaisResponse> obterDadosAdicionaisAsync(SASCAR.obterDadosAdicionaisRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDadosAdicionaisC" +
             "lienteRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDadosAdicionaisC" +
             "lienteResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDadosAdicionaisC" +
             "liente/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterDadosAdicionaisClienteResponse obterDadosAdicionaisCliente(SASCAR.obterDadosAdicionaisClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDadosAdicionaisC" +
+            "lienteRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDadosAdicionaisC" +
+            "lienteResponse")]
         System.Threading.Tasks.Task<SASCAR.obterDadosAdicionaisClienteResponse> obterDadosAdicionaisClienteAsync(SASCAR.obterDadosAdicionaisClienteRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventosTempoDire" +
             "caoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventosTempoDire" +
             "caoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventosTempoDire" +
             "cao/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterEventosTempoDirecaoResponse obterEventosTempoDirecao(SASCAR.obterEventosTempoDirecaoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventosTempoDire" +
+            "caoRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventosTempoDire" +
+            "caoResponse")]
         System.Threading.Tasks.Task<SASCAR.obterEventosTempoDirecaoResponse> obterEventosTempoDirecaoAsync(SASCAR.obterEventosTempoDirecaoRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventosTempoDire" +
             "caoDataChegadaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventosTempoDire" +
             "caoDataChegadaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventosTempoDire" +
             "caoDataChegada/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterEventosTempoDirecaoDataChegadaResponse obterEventosTempoDirecaoDataChegada(SASCAR.obterEventosTempoDirecaoDataChegadaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventosTempoDire" +
+            "caoDataChegadaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterEventosTempoDire" +
+            "caoDataChegadaResponse")]
         System.Threading.Tasks.Task<SASCAR.obterEventosTempoDirecaoDataChegadaResponse> obterEventosTempoDirecaoDataChegadaAsync(SASCAR.obterEventosTempoDirecaoDataChegadaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/solicitarEventosCaixa" +
             "PretaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/solicitarEventosCaixa" +
             "PretaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.Exception), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/solicitarEventosCaixa" +
             "Preta/Fault/Exception", Name="Exception")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.solicitarEventosCaixaPretaResponse solicitarEventosCaixaPreta(SASCAR.solicitarEventosCaixaPretaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/solicitarEventosCaixa" +
+            "PretaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/solicitarEventosCaixa" +
+            "PretaResponse")]
         System.Threading.Tasks.Task<SASCAR.solicitarEventosCaixaPretaResponse> solicitarEventosCaixaPretaAsync(SASCAR.solicitarEventosCaixaPretaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlArrayAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/recuperarEventosCaixa" +
             "PretaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/recuperarEventosCaixa" +
             "PretaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.Exception), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/recuperarEventosCaixa" +
             "Preta/Fault/Exception", Name="Exception")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.recuperarEventosCaixaPretaResponse recuperarEventosCaixaPreta(SASCAR.recuperarEventosCaixaPretaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/recuperarEventosCaixa" +
+            "PretaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/recuperarEventosCaixa" +
+            "PretaResponse")]
         System.Threading.Tasks.Task<SASCAR.recuperarEventosCaixaPretaResponse> recuperarEventosCaixaPretaAsync(SASCAR.recuperarEventosCaixaPretaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/consultaQuantidadePac" +
             "otesPosicoesPendentesRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/consultaQuantidadePac" +
             "otesPosicoesPendentesResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.Exception), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/consultaQuantidadePac" +
             "otesPosicoesPendentes/Fault/Exception", Name="Exception")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.consultaQuantidadePacotesPosicoesPendentesResponse consultaQuantidadePacotesPosicoesPendentes(SASCAR.consultaQuantidadePacotesPosicoesPendentesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/consultaQuantidadePac" +
+            "otesPosicoesPendentesRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/consultaQuantidadePac" +
+            "otesPosicoesPendentesResponse")]
         System.Threading.Tasks.Task<SASCAR.consultaQuantidadePacotesPosicoesPendentesResponse> consultaQuantidadePacotesPosicoesPendentesAsync(SASCAR.consultaQuantidadePacotesPosicoesPendentesRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacoteIntegracao" +
             "DeltatelemetriaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacoteIntegracao" +
             "DeltatelemetriaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacoteIntegracao" +
             "Deltatelemetria/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterPacoteIntegracaoDeltatelemetriaResponse obterPacoteIntegracaoDeltatelemetria(SASCAR.obterPacoteIntegracaoDeltatelemetriaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacoteIntegracao" +
+            "DeltatelemetriaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterPacoteIntegracao" +
+            "DeltatelemetriaResponse")]
         System.Threading.Tasks.Task<SASCAR.obterPacoteIntegracaoDeltatelemetriaResponse> obterPacoteIntegracaoDeltatelemetriaAsync(SASCAR.obterPacoteIntegracaoDeltatelemetriaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionsPacketJSO" +
             "NRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionsPacketJSO" +
             "NResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionsPacketJSO" +
             "N/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.getPositionsPacketJSONResponse getPositionsPacketJSON(SASCAR.getPositionsPacketJSONRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionsPacketJSO" +
+            "NRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionsPacketJSO" +
+            "NResponse")]
         System.Threading.Tasks.Task<SASCAR.getPositionsPacketJSONResponse> getPositionsPacketJSONAsync(SASCAR.getPositionsPacketJSONRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getDriverPositionPack" +
             "etJSONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getDriverPositionPack" +
             "etJSONResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getDriverPositionPack" +
             "etJSON/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.getDriverPositionPacketJSONResponse getDriverPositionPacketJSON(SASCAR.getDriverPositionPacketJSONRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getDriverPositionPack" +
+            "etJSONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getDriverPositionPack" +
+            "etJSONResponse")]
         System.Threading.Tasks.Task<SASCAR.getDriverPositionPacketJSONResponse> getDriverPositionPacketJSONAsync(SASCAR.getDriverPositionPacketJSONRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionPacketByRa" +
             "ngeJSONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionPacketByRa" +
             "ngeJSONResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionPacketByRa" +
             "ngeJSON/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.getPositionPacketByRangeJSONResponse getPositionPacketByRangeJSON(SASCAR.getPositionPacketByRangeJSONRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionPacketByRa" +
+            "ngeJSONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionPacketByRa" +
+            "ngeJSONResponse")]
         System.Threading.Tasks.Task<SASCAR.getPositionPacketByRangeJSONResponse> getPositionPacketByRangeJSONAsync(SASCAR.getPositionPacketByRangeJSONRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getDriverPositionPack" +
             "etByRangeJSONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getDriverPositionPack" +
             "etByRangeJSONResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getDriverPositionPack" +
             "etByRangeJSON/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.getDriverPositionPacketByRangeJSONResponse getDriverPositionPacketByRangeJSON(SASCAR.getDriverPositionPacketByRangeJSONRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getDriverPositionPack" +
+            "etByRangeJSONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getDriverPositionPack" +
+            "etByRangeJSONResponse")]
         System.Threading.Tasks.Task<SASCAR.getDriverPositionPacketByRangeJSONResponse> getDriverPositionPacketByRangeJSONAsync(SASCAR.getDriverPositionPacketByRangeJSONRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getVehiclesJSONReques" +
             "t", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getVehiclesJSONRespon" +
             "se")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getVehiclesJSON/Fault" +
             "/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.getVehiclesJSONResponse getVehiclesJSON(SASCAR.getVehiclesJSONRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getVehiclesJSONReques" +
+            "t", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getVehiclesJSONRespon" +
+            "se")]
         System.Threading.Tasks.Task<SASCAR.getVehiclesJSONResponse> getVehiclesJSONAsync(SASCAR.getVehiclesJSONRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionPacketWith" +
             "LicensePlateJSONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionPacketWith" +
             "LicensePlateJSONResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionPacketWith" +
             "LicensePlateJSON/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.getPositionPacketWithLicensePlateJSONResponse getPositionPacketWithLicensePlateJSON(SASCAR.getPositionPacketWithLicensePlateJSONRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionPacketWith" +
+            "LicensePlateJSONRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/getPositionPacketWith" +
+            "LicensePlateJSONResponse")]
         System.Threading.Tasks.Task<SASCAR.getPositionPacketWithLicensePlateJSONResponse> getPositionPacketWithLicensePlateJSONAsync(SASCAR.getPositionPacketWithLicensePlateJSONRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
             "ntegracaoInerciaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
             "ntegracaoInerciaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
             "ntegracaoInercia/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterDeltaTelemetriaIntegracaoInerciaResponse obterDeltaTelemetriaIntegracaoInercia(SASCAR.obterDeltaTelemetriaIntegracaoInerciaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
+            "ntegracaoInerciaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
+            "ntegracaoInerciaResponse")]
         System.Threading.Tasks.Task<SASCAR.obterDeltaTelemetriaIntegracaoInerciaResponse> obterDeltaTelemetriaIntegracaoInerciaAsync(SASCAR.obterDeltaTelemetriaIntegracaoInerciaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
             "ntegracaoInerciaDataChegadaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
             "ntegracaoInerciaDataChegadaResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
             "ntegracaoInerciaDataChegada/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterDeltaTelemetriaIntegracaoInerciaDataChegadaResponse obterDeltaTelemetriaIntegracaoInerciaDataChegada(SASCAR.obterDeltaTelemetriaIntegracaoInerciaDataChegadaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
+            "ntegracaoInerciaDataChegadaRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterDeltaTelemetriaI" +
+            "ntegracaoInerciaDataChegadaResponse")]
         System.Threading.Tasks.Task<SASCAR.obterDeltaTelemetriaIntegracaoInerciaDataChegadaResponse> obterDeltaTelemetriaIntegracaoInerciaDataChegadaAsync(SASCAR.obterDeltaTelemetriaIntegracaoInerciaDataChegadaRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterCadastroAlertasA" +
             "vdRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterCadastroAlertasA" +
             "vdResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterCadastroAlertasA" +
             "vd/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterCadastroAlertasAvdResponse obterCadastroAlertasAvd(SASCAR.obterCadastroAlertasAvdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterCadastroAlertasA" +
+            "vdRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterCadastroAlertasA" +
+            "vdResponse")]
         System.Threading.Tasks.Task<SASCAR.obterCadastroAlertasAvdResponse> obterCadastroAlertasAvdAsync(SASCAR.obterCadastroAlertasAvdRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterAlertasAVDVincul" +
             "adosRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterAlertasAVDVincul" +
             "adosResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.sasIntegraFaultBean), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterAlertasAVDVincul" +
             "ados/Fault/SasIntegraNotification", Name="SasIntegraFault")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterAlertasAVDVinculadosResponse obterAlertasAVDVinculados(SASCAR.obterAlertasAVDVinculadosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterAlertasAVDVincul" +
+            "adosRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterAlertasAVDVincul" +
+            "adosResponse")]
         System.Threading.Tasks.Task<SASCAR.obterAlertasAVDVinculadosResponse> obterAlertasAVDVinculadosAsync(SASCAR.obterAlertasAVDVinculadosRequest request);
         
+        // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'Microsoft.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterRotasRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterRotasResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SASCAR.Exception), Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterRotas/Fault/Exce" +
             "ption", Name="Exception")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SASCAR.obterRotasResponse obterRotas(SASCAR.obterRotasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterRotasRequest", ReplyAction="http://webservice.web.integracao.sascar.com.br/SasIntegraWS/obterRotasResponse")]
         System.Threading.Tasks.Task<SASCAR.obterRotasResponse> obterRotasAsync(SASCAR.obterRotasRequest request);
     }
     
@@ -17811,6 +18323,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.atualizarSenhaResponse SASCAR.SasIntegraWS.atualizarSenha(SASCAR.atualizarSenhaRequest request)
+        {
+            return base.Channel.atualizarSenha(request);
+        }
+        
+        public string atualizarSenha(string usuario, string senhaAtual, string novaSenha)
+        {
+            SASCAR.atualizarSenhaRequest inValue = new SASCAR.atualizarSenhaRequest();
+            inValue.usuario = usuario;
+            inValue.senhaAtual = senhaAtual;
+            inValue.novaSenha = novaSenha;
+            SASCAR.atualizarSenhaResponse retVal = ((SASCAR.SasIntegraWS)(this)).atualizarSenha(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.atualizarSenhaResponse> SASCAR.SasIntegraWS.atualizarSenhaAsync(SASCAR.atualizarSenhaRequest request)
         {
             return base.Channel.atualizarSenhaAsync(request);
@@ -17823,6 +18351,34 @@ namespace SASCAR
             inValue.senhaAtual = senhaAtual;
             inValue.novaSenha = novaSenha;
             return ((SASCAR.SasIntegraWS)(this)).atualizarSenhaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.getSmartCamerasEventsResponse SASCAR.SasIntegraWS.getSmartCamerasEvents(SASCAR.getSmartCamerasEventsRequest request)
+        {
+            return base.Channel.getSmartCamerasEvents(request);
+        }
+        
+        public SASCAR.smartCamerasEvento[] getSmartCamerasEvents(string usuario, string agrupador, string senha, int offset, int limit, string motoristas, string veiculos, string dataInicio, string dataFim, string tipoEvento, string criticidade, string turno, string diaSemana, int quantidade, string status)
+        {
+            SASCAR.getSmartCamerasEventsRequest inValue = new SASCAR.getSmartCamerasEventsRequest();
+            inValue.usuario = usuario;
+            inValue.agrupador = agrupador;
+            inValue.senha = senha;
+            inValue.offset = offset;
+            inValue.limit = limit;
+            inValue.motoristas = motoristas;
+            inValue.veiculos = veiculos;
+            inValue.dataInicio = dataInicio;
+            inValue.dataFim = dataFim;
+            inValue.tipoEvento = tipoEvento;
+            inValue.criticidade = criticidade;
+            inValue.turno = turno;
+            inValue.diaSemana = diaSemana;
+            inValue.quantidade = quantidade;
+            inValue.status = status;
+            SASCAR.getSmartCamerasEventsResponse retVal = ((SASCAR.SasIntegraWS)(this)).getSmartCamerasEvents(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -17853,6 +18409,23 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterClientesResponse SASCAR.SasIntegraWS.obterClientes(SASCAR.obterClientesRequest request)
+        {
+            return base.Channel.obterClientes(request);
+        }
+        
+        public SASCAR.cliente[] obterClientes(string usuario, string senha, int quantidade, int idCliente)
+        {
+            SASCAR.obterClientesRequest inValue = new SASCAR.obterClientesRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            inValue.idCliente = idCliente;
+            SASCAR.obterClientesResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterClientes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterClientesResponse> SASCAR.SasIntegraWS.obterClientesAsync(SASCAR.obterClientesRequest request)
         {
             return base.Channel.obterClientesAsync(request);
@@ -17866,6 +18439,23 @@ namespace SASCAR
             inValue.quantidade = quantidade;
             inValue.idCliente = idCliente;
             return ((SASCAR.SasIntegraWS)(this)).obterClientesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterMotoristasResponse SASCAR.SasIntegraWS.obterMotoristas(SASCAR.obterMotoristasRequest request)
+        {
+            return base.Channel.obterMotoristas(request);
+        }
+        
+        public SASCAR.motorista[] obterMotoristas(string usuario, string senha, int quantidade, int idMotorista)
+        {
+            SASCAR.obterMotoristasRequest inValue = new SASCAR.obterMotoristasRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            inValue.idMotorista = idMotorista;
+            SASCAR.obterMotoristasResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterMotoristas(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -17885,6 +18475,23 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterMotoristasVeiculosResponse SASCAR.SasIntegraWS.obterMotoristasVeiculos(SASCAR.obterMotoristasVeiculosRequest request)
+        {
+            return base.Channel.obterMotoristasVeiculos(request);
+        }
+        
+        public SASCAR.motoristaVeiculo[] obterMotoristasVeiculos(string usuario, string senha, int quantidade, long idMotoristaVeiculo)
+        {
+            SASCAR.obterMotoristasVeiculosRequest inValue = new SASCAR.obterMotoristasVeiculosRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            inValue.idMotoristaVeiculo = idMotoristaVeiculo;
+            SASCAR.obterMotoristasVeiculosResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterMotoristasVeiculos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterMotoristasVeiculosResponse> SASCAR.SasIntegraWS.obterMotoristasVeiculosAsync(SASCAR.obterMotoristasVeiculosRequest request)
         {
             return base.Channel.obterMotoristasVeiculosAsync(request);
@@ -17898,6 +18505,22 @@ namespace SASCAR
             inValue.quantidade = quantidade;
             inValue.idMotoristaVeiculo = idMotoristaVeiculo;
             return ((SASCAR.SasIntegraWS)(this)).obterMotoristasVeiculosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterMotoristasPorVeiculoResponse SASCAR.SasIntegraWS.obterMotoristasPorVeiculo(SASCAR.obterMotoristasPorVeiculoRequest request)
+        {
+            return base.Channel.obterMotoristasPorVeiculo(request);
+        }
+        
+        public SASCAR.motoristaVeiculo[] obterMotoristasPorVeiculo(string usuario, string senha, long idVeiculo)
+        {
+            SASCAR.obterMotoristasPorVeiculoRequest inValue = new SASCAR.obterMotoristasPorVeiculoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterMotoristasPorVeiculoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterMotoristasPorVeiculo(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -17916,6 +18539,21 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterLayoutTecladoVeiculosResponse SASCAR.SasIntegraWS.obterLayoutTecladoVeiculos(SASCAR.obterLayoutTecladoVeiculosRequest request)
+        {
+            return base.Channel.obterLayoutTecladoVeiculos(request);
+        }
+        
+        public SASCAR.layoutTecladoVeiculos[] obterLayoutTecladoVeiculos(string usuario, string senha)
+        {
+            SASCAR.obterLayoutTecladoVeiculosRequest inValue = new SASCAR.obterLayoutTecladoVeiculosRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            SASCAR.obterLayoutTecladoVeiculosResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterLayoutTecladoVeiculos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterLayoutTecladoVeiculosResponse> SASCAR.SasIntegraWS.obterLayoutTecladoVeiculosAsync(SASCAR.obterLayoutTecladoVeiculosRequest request)
         {
             return base.Channel.obterLayoutTecladoVeiculosAsync(request);
@@ -17927,6 +18565,21 @@ namespace SASCAR
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((SASCAR.SasIntegraWS)(this)).obterLayoutTecladoVeiculosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterLayoutGrupoPontosResponse SASCAR.SasIntegraWS.obterLayoutGrupoPontos(SASCAR.obterLayoutGrupoPontosRequest request)
+        {
+            return base.Channel.obterLayoutGrupoPontos(request);
+        }
+        
+        public SASCAR.layoutGrupoPontos[] obterLayoutGrupoPontos(string usuario, string senha)
+        {
+            SASCAR.obterLayoutGrupoPontosRequest inValue = new SASCAR.obterLayoutGrupoPontosRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            SASCAR.obterLayoutGrupoPontosResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterLayoutGrupoPontos(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -17944,6 +18597,21 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterGrupoAtuadoresResponse SASCAR.SasIntegraWS.obterGrupoAtuadores(SASCAR.obterGrupoAtuadoresRequest request)
+        {
+            return base.Channel.obterGrupoAtuadores(request);
+        }
+        
+        public SASCAR.grupoAtuador[] obterGrupoAtuadores(string usuario, string senha)
+        {
+            SASCAR.obterGrupoAtuadoresRequest inValue = new SASCAR.obterGrupoAtuadoresRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            SASCAR.obterGrupoAtuadoresResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterGrupoAtuadores(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterGrupoAtuadoresResponse> SASCAR.SasIntegraWS.obterGrupoAtuadoresAsync(SASCAR.obterGrupoAtuadoresRequest request)
         {
             return base.Channel.obterGrupoAtuadoresAsync(request);
@@ -17955,6 +18623,22 @@ namespace SASCAR
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((SASCAR.SasIntegraWS)(this)).obterGrupoAtuadoresAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterStatusComandoResponse SASCAR.SasIntegraWS.obterStatusComando(SASCAR.obterStatusComandoRequest request)
+        {
+            return base.Channel.obterStatusComando(request);
+        }
+        
+        public SASCAR.statusComando[] obterStatusComando(string usuario, string senha, int ticket)
+        {
+            SASCAR.obterStatusComandoRequest inValue = new SASCAR.obterStatusComandoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.ticket = ticket;
+            SASCAR.obterStatusComandoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterStatusComando(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -17973,6 +18657,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterStatusComandoTicketSascarResponse SASCAR.SasIntegraWS.obterStatusComandoTicketSascar(SASCAR.obterStatusComandoTicketSascarRequest request)
+        {
+            return base.Channel.obterStatusComandoTicketSascar(request);
+        }
+        
+        public SASCAR.statusComando[] obterStatusComandoTicketSascar(string usuario, string senha, int ticket)
+        {
+            SASCAR.obterStatusComandoTicketSascarRequest inValue = new SASCAR.obterStatusComandoTicketSascarRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.ticket = ticket;
+            SASCAR.obterStatusComandoTicketSascarResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterStatusComandoTicketSascar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterStatusComandoTicketSascarResponse> SASCAR.SasIntegraWS.obterStatusComandoTicketSascarAsync(SASCAR.obterStatusComandoTicketSascarRequest request)
         {
             return base.Channel.obterStatusComandoTicketSascarAsync(request);
@@ -17988,6 +18688,21 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterTipoComandoResponse SASCAR.SasIntegraWS.obterTipoComando(SASCAR.obterTipoComandoRequest request)
+        {
+            return base.Channel.obterTipoComando(request);
+        }
+        
+        public SASCAR.tipoComando[] obterTipoComando(string usuario, string senha)
+        {
+            SASCAR.obterTipoComandoRequest inValue = new SASCAR.obterTipoComandoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            SASCAR.obterTipoComandoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterTipoComando(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterTipoComandoResponse> SASCAR.SasIntegraWS.obterTipoComandoAsync(SASCAR.obterTipoComandoRequest request)
         {
             return base.Channel.obterTipoComandoAsync(request);
@@ -17999,6 +18714,22 @@ namespace SASCAR
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((SASCAR.SasIntegraWS)(this)).obterTipoComandoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicoesResponse SASCAR.SasIntegraWS.obterPacotePosicoes(SASCAR.obterPacotePosicoesRequest request)
+        {
+            return base.Channel.obterPacotePosicoes(request);
+        }
+        
+        public SASCAR.pacotePosicao[] obterPacotePosicoes(string usuario, string senha, int quantidade)
+        {
+            SASCAR.obterPacotePosicoesRequest inValue = new SASCAR.obterPacotePosicoesRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            SASCAR.obterPacotePosicoesResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoes(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18017,6 +18748,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicoesComPlacaResponse SASCAR.SasIntegraWS.obterPacotePosicoesComPlaca(SASCAR.obterPacotePosicoesComPlacaRequest request)
+        {
+            return base.Channel.obterPacotePosicoesComPlaca(request);
+        }
+        
+        public SASCAR.pacotePosicao[] obterPacotePosicoesComPlaca(string usuario, string senha, int quantidade)
+        {
+            SASCAR.obterPacotePosicoesComPlacaRequest inValue = new SASCAR.obterPacotePosicoesComPlacaRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            SASCAR.obterPacotePosicoesComPlacaResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoesComPlaca(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesComPlacaResponse> SASCAR.SasIntegraWS.obterPacotePosicoesComPlacaAsync(SASCAR.obterPacotePosicoesComPlacaRequest request)
         {
             return base.Channel.obterPacotePosicoesComPlacaAsync(request);
@@ -18029,6 +18776,22 @@ namespace SASCAR
             inValue.senha = senha;
             inValue.quantidade = quantidade;
             return ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoesComPlacaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicoesMotoristaResponse SASCAR.SasIntegraWS.obterPacotePosicoesMotorista(SASCAR.obterPacotePosicoesMotoristaRequest request)
+        {
+            return base.Channel.obterPacotePosicoesMotorista(request);
+        }
+        
+        public SASCAR.pacotePosicao[] obterPacotePosicoesMotorista(string usuario, string senha, int quantidade)
+        {
+            SASCAR.obterPacotePosicoesMotoristaRequest inValue = new SASCAR.obterPacotePosicoesMotoristaRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            SASCAR.obterPacotePosicoesMotoristaResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoesMotorista(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18047,6 +18810,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicoesMotoristaComPlacaResponse SASCAR.SasIntegraWS.obterPacotePosicoesMotoristaComPlaca(SASCAR.obterPacotePosicoesMotoristaComPlacaRequest request)
+        {
+            return base.Channel.obterPacotePosicoesMotoristaComPlaca(request);
+        }
+        
+        public SASCAR.pacotePosicao[] obterPacotePosicoesMotoristaComPlaca(string usuario, string senha, int quantidade)
+        {
+            SASCAR.obterPacotePosicoesMotoristaComPlacaRequest inValue = new SASCAR.obterPacotePosicoesMotoristaComPlacaRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            SASCAR.obterPacotePosicoesMotoristaComPlacaResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoesMotoristaComPlaca(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesMotoristaComPlacaResponse> SASCAR.SasIntegraWS.obterPacotePosicoesMotoristaComPlacaAsync(SASCAR.obterPacotePosicoesMotoristaComPlacaRequest request)
         {
             return base.Channel.obterPacotePosicoesMotoristaComPlacaAsync(request);
@@ -18059,6 +18838,23 @@ namespace SASCAR
             inValue.senha = senha;
             inValue.quantidade = quantidade;
             return ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoesMotoristaComPlacaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicoesRestricaoResponse SASCAR.SasIntegraWS.obterPacotePosicoesRestricao(SASCAR.obterPacotePosicoesRestricaoRequest request)
+        {
+            return base.Channel.obterPacotePosicoesRestricao(request);
+        }
+        
+        public SASCAR.pacotePosicao[] obterPacotePosicoesRestricao(string usuario, string senha, int quantidade, int idVeiculo)
+        {
+            SASCAR.obterPacotePosicoesRestricaoRequest inValue = new SASCAR.obterPacotePosicoesRestricaoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterPacotePosicoesRestricaoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoesRestricao(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18078,6 +18874,23 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicoesMotoristaRestricaoResponse SASCAR.SasIntegraWS.obterPacotePosicoesMotoristaRestricao(SASCAR.obterPacotePosicoesMotoristaRestricaoRequest request)
+        {
+            return base.Channel.obterPacotePosicoesMotoristaRestricao(request);
+        }
+        
+        public SASCAR.pacotePosicao[] obterPacotePosicoesMotoristaRestricao(string usuario, string senha, int quantidade, int idVeiculo)
+        {
+            SASCAR.obterPacotePosicoesMotoristaRestricaoRequest inValue = new SASCAR.obterPacotePosicoesMotoristaRestricaoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterPacotePosicoesMotoristaRestricaoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoesMotoristaRestricao(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesMotoristaRestricaoResponse> SASCAR.SasIntegraWS.obterPacotePosicoesMotoristaRestricaoAsync(SASCAR.obterPacotePosicoesMotoristaRestricaoRequest request)
         {
             return base.Channel.obterPacotePosicoesMotoristaRestricaoAsync(request);
@@ -18091,6 +18904,22 @@ namespace SASCAR
             inValue.quantidade = quantidade;
             inValue.idVeiculo = idVeiculo;
             return ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoesMotoristaRestricaoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicoesRFNacionalResponse SASCAR.SasIntegraWS.obterPacotePosicoesRFNacional(SASCAR.obterPacotePosicoesRFNacionalRequest request)
+        {
+            return base.Channel.obterPacotePosicoesRFNacional(request);
+        }
+        
+        public SASCAR.pacotePosicaoRFNacional[] obterPacotePosicoesRFNacional(string usuario, string senha, int quantidade)
+        {
+            SASCAR.obterPacotePosicoesRFNacionalRequest inValue = new SASCAR.obterPacotePosicoesRFNacionalRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            SASCAR.obterPacotePosicoesRFNacionalResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoesRFNacional(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18109,6 +18938,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicoesJSONResponse SASCAR.SasIntegraWS.obterPacotePosicoesJSON(SASCAR.obterPacotePosicoesJSONRequest request)
+        {
+            return base.Channel.obterPacotePosicoesJSON(request);
+        }
+        
+        public string[] obterPacotePosicoesJSON(string usuario, string senha, int quantidade)
+        {
+            SASCAR.obterPacotePosicoesJSONRequest inValue = new SASCAR.obterPacotePosicoesJSONRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            SASCAR.obterPacotePosicoesJSONResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoesJSON(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesJSONResponse> SASCAR.SasIntegraWS.obterPacotePosicoesJSONAsync(SASCAR.obterPacotePosicoesJSONRequest request)
         {
             return base.Channel.obterPacotePosicoesJSONAsync(request);
@@ -18121,6 +18966,22 @@ namespace SASCAR
             inValue.senha = senha;
             inValue.quantidade = quantidade;
             return ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoesJSONAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicoesJSONComPlacaResponse SASCAR.SasIntegraWS.obterPacotePosicoesJSONComPlaca(SASCAR.obterPacotePosicoesJSONComPlacaRequest request)
+        {
+            return base.Channel.obterPacotePosicoesJSONComPlaca(request);
+        }
+        
+        public string[] obterPacotePosicoesJSONComPlaca(string usuario, string senha, int quantidade)
+        {
+            SASCAR.obterPacotePosicoesJSONComPlacaRequest inValue = new SASCAR.obterPacotePosicoesJSONComPlacaRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            SASCAR.obterPacotePosicoesJSONComPlacaResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoesJSONComPlaca(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18139,6 +19000,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicoesMotoristaJSONResponse SASCAR.SasIntegraWS.obterPacotePosicoesMotoristaJSON(SASCAR.obterPacotePosicoesMotoristaJSONRequest request)
+        {
+            return base.Channel.obterPacotePosicoesMotoristaJSON(request);
+        }
+        
+        public string[] obterPacotePosicoesMotoristaJSON(string usuario, string senha, int quantidade)
+        {
+            SASCAR.obterPacotePosicoesMotoristaJSONRequest inValue = new SASCAR.obterPacotePosicoesMotoristaJSONRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            SASCAR.obterPacotePosicoesMotoristaJSONResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoesMotoristaJSON(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicoesMotoristaJSONResponse> SASCAR.SasIntegraWS.obterPacotePosicoesMotoristaJSONAsync(SASCAR.obterPacotePosicoesMotoristaJSONRequest request)
         {
             return base.Channel.obterPacotePosicoesMotoristaJSONAsync(request);
@@ -18151,6 +19028,24 @@ namespace SASCAR
             inValue.senha = senha;
             inValue.quantidade = quantidade;
             return ((SASCAR.SasIntegraWS)(this)).obterPacotePosicoesMotoristaJSONAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicaoPorRangeJSONResponse SASCAR.SasIntegraWS.obterPacotePosicaoPorRangeJSON(SASCAR.obterPacotePosicaoPorRangeJSONRequest request)
+        {
+            return base.Channel.obterPacotePosicaoPorRangeJSON(request);
+        }
+        
+        public string[] obterPacotePosicaoPorRangeJSON(string usuario, string senha, long idInicio, long idFinal, int quantidade)
+        {
+            SASCAR.obterPacotePosicaoPorRangeJSONRequest inValue = new SASCAR.obterPacotePosicaoPorRangeJSONRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.idInicio = idInicio;
+            inValue.idFinal = idFinal;
+            inValue.quantidade = quantidade;
+            SASCAR.obterPacotePosicaoPorRangeJSONResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicaoPorRangeJSON(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18171,6 +19066,24 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicaoMotoristaPorRangeJSONResponse SASCAR.SasIntegraWS.obterPacotePosicaoMotoristaPorRangeJSON(SASCAR.obterPacotePosicaoMotoristaPorRangeJSONRequest request)
+        {
+            return base.Channel.obterPacotePosicaoMotoristaPorRangeJSON(request);
+        }
+        
+        public string[] obterPacotePosicaoMotoristaPorRangeJSON(string usuario, string senha, long idInicio, long idFinal, int quantidade)
+        {
+            SASCAR.obterPacotePosicaoMotoristaPorRangeJSONRequest inValue = new SASCAR.obterPacotePosicaoMotoristaPorRangeJSONRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.idInicio = idInicio;
+            inValue.idFinal = idFinal;
+            inValue.quantidade = quantidade;
+            SASCAR.obterPacotePosicaoMotoristaPorRangeJSONResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicaoMotoristaPorRangeJSON(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicaoMotoristaPorRangeJSONResponse> SASCAR.SasIntegraWS.obterPacotePosicaoMotoristaPorRangeJSONAsync(SASCAR.obterPacotePosicaoMotoristaPorRangeJSONRequest request)
         {
             return base.Channel.obterPacotePosicaoMotoristaPorRangeJSONAsync(request);
@@ -18185,6 +19098,24 @@ namespace SASCAR
             inValue.idFinal = idFinal;
             inValue.quantidade = quantidade;
             return ((SASCAR.SasIntegraWS)(this)).obterPacotePosicaoMotoristaPorRangeJSONAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicaoPorRangeResponse SASCAR.SasIntegraWS.obterPacotePosicaoPorRange(SASCAR.obterPacotePosicaoPorRangeRequest request)
+        {
+            return base.Channel.obterPacotePosicaoPorRange(request);
+        }
+        
+        public SASCAR.pacotePosicao[] obterPacotePosicaoPorRange(string usuario, string senha, long idInicio, long idFinal, int quantidade)
+        {
+            SASCAR.obterPacotePosicaoPorRangeRequest inValue = new SASCAR.obterPacotePosicaoPorRangeRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.idInicio = idInicio;
+            inValue.idFinal = idFinal;
+            inValue.quantidade = quantidade;
+            SASCAR.obterPacotePosicaoPorRangeResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicaoPorRange(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18205,6 +19136,24 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicaoMotoristaPorRangeResponse SASCAR.SasIntegraWS.obterPacotePosicaoMotoristaPorRange(SASCAR.obterPacotePosicaoMotoristaPorRangeRequest request)
+        {
+            return base.Channel.obterPacotePosicaoMotoristaPorRange(request);
+        }
+        
+        public SASCAR.pacotePosicao[] obterPacotePosicaoMotoristaPorRange(string usuario, string senha, long idInicio, long idFinal, int quantidade)
+        {
+            SASCAR.obterPacotePosicaoMotoristaPorRangeRequest inValue = new SASCAR.obterPacotePosicaoMotoristaPorRangeRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.idInicio = idInicio;
+            inValue.idFinal = idFinal;
+            inValue.quantidade = quantidade;
+            SASCAR.obterPacotePosicaoMotoristaPorRangeResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicaoMotoristaPorRange(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicaoMotoristaPorRangeResponse> SASCAR.SasIntegraWS.obterPacotePosicaoMotoristaPorRangeAsync(SASCAR.obterPacotePosicaoMotoristaPorRangeRequest request)
         {
             return base.Channel.obterPacotePosicaoMotoristaPorRangeAsync(request);
@@ -18219,6 +19168,24 @@ namespace SASCAR
             inValue.idFinal = idFinal;
             inValue.quantidade = quantidade;
             return ((SASCAR.SasIntegraWS)(this)).obterPacotePosicaoMotoristaPorRangeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicaoHistoricoResponse SASCAR.SasIntegraWS.obterPacotePosicaoHistorico(SASCAR.obterPacotePosicaoHistoricoRequest request)
+        {
+            return base.Channel.obterPacotePosicaoHistorico(request);
+        }
+        
+        public SASCAR.pacotePosicao[] obterPacotePosicaoHistorico(string usuario, string senha, string dataInicio, string dataFinal, int idVeiculo)
+        {
+            SASCAR.obterPacotePosicaoHistoricoRequest inValue = new SASCAR.obterPacotePosicaoHistoricoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.dataInicio = dataInicio;
+            inValue.dataFinal = dataFinal;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterPacotePosicaoHistoricoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicaoHistorico(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18239,6 +19206,24 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacotePosicaoMotoristaHistoricoResponse SASCAR.SasIntegraWS.obterPacotePosicaoMotoristaHistorico(SASCAR.obterPacotePosicaoMotoristaHistoricoRequest request)
+        {
+            return base.Channel.obterPacotePosicaoMotoristaHistorico(request);
+        }
+        
+        public SASCAR.pacotePosicao[] obterPacotePosicaoMotoristaHistorico(string usuario, string senha, string dataInicio, string dataFinal, int idVeiculo)
+        {
+            SASCAR.obterPacotePosicaoMotoristaHistoricoRequest inValue = new SASCAR.obterPacotePosicaoMotoristaHistoricoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.dataInicio = dataInicio;
+            inValue.dataFinal = dataFinal;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterPacotePosicaoMotoristaHistoricoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacotePosicaoMotoristaHistorico(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterPacotePosicaoMotoristaHistoricoResponse> SASCAR.SasIntegraWS.obterPacotePosicaoMotoristaHistoricoAsync(SASCAR.obterPacotePosicaoMotoristaHistoricoRequest request)
         {
             return base.Channel.obterPacotePosicaoMotoristaHistoricoAsync(request);
@@ -18253,6 +19238,22 @@ namespace SASCAR
             inValue.dataFinal = dataFinal;
             inValue.idVeiculo = idVeiculo;
             return ((SASCAR.SasIntegraWS)(this)).obterPacotePosicaoMotoristaHistoricoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacoteLocalizacaoResponse SASCAR.SasIntegraWS.obterPacoteLocalizacao(SASCAR.obterPacoteLocalizacaoRequest request)
+        {
+            return base.Channel.obterPacoteLocalizacao(request);
+        }
+        
+        public SASCAR.pacoteLocalizacao[] obterPacoteLocalizacao(string usuario, string senha, int quantidade)
+        {
+            SASCAR.obterPacoteLocalizacaoRequest inValue = new SASCAR.obterPacoteLocalizacaoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            SASCAR.obterPacoteLocalizacaoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacoteLocalizacao(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18271,6 +19272,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterMacroTd50TmcdResponse SASCAR.SasIntegraWS.obterMacroTd50Tmcd(SASCAR.obterMacroTd50TmcdRequest request)
+        {
+            return base.Channel.obterMacroTd50Tmcd(request);
+        }
+        
+        public SASCAR.macroTd50Tmcd[] obterMacroTd50Tmcd(string usuario, string senha, SASCAR.tipoTeclado tipoTeclado)
+        {
+            SASCAR.obterMacroTd50TmcdRequest inValue = new SASCAR.obterMacroTd50TmcdRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.tipoTeclado = tipoTeclado;
+            SASCAR.obterMacroTd50TmcdResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterMacroTd50Tmcd(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterMacroTd50TmcdResponse> SASCAR.SasIntegraWS.obterMacroTd50TmcdAsync(SASCAR.obterMacroTd50TmcdRequest request)
         {
             return base.Channel.obterMacroTd50TmcdAsync(request);
@@ -18283,6 +19300,22 @@ namespace SASCAR
             inValue.senha = senha;
             inValue.tipoTeclado = tipoTeclado;
             return ((SASCAR.SasIntegraWS)(this)).obterMacroTd50TmcdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterMacroTd50TmcdDetalhadoResponse SASCAR.SasIntegraWS.obterMacroTd50TmcdDetalhado(SASCAR.obterMacroTd50TmcdDetalhadoRequest request)
+        {
+            return base.Channel.obterMacroTd50TmcdDetalhado(request);
+        }
+        
+        public SASCAR.macroTd50TmcdDetalhado[] obterMacroTd50TmcdDetalhado(string usuario, string senha, SASCAR.tipoTeclado tipoTeclado)
+        {
+            SASCAR.obterMacroTd50TmcdDetalhadoRequest inValue = new SASCAR.obterMacroTd50TmcdDetalhadoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.tipoTeclado = tipoTeclado;
+            SASCAR.obterMacroTd50TmcdDetalhadoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterMacroTd50TmcdDetalhado(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18301,6 +19334,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterMacroTd40Response SASCAR.SasIntegraWS.obterMacroTd40(SASCAR.obterMacroTd40Request request)
+        {
+            return base.Channel.obterMacroTd40(request);
+        }
+        
+        public SASCAR.macroTd40[] obterMacroTd40(string usuario, string senha, bool satelital)
+        {
+            SASCAR.obterMacroTd40Request inValue = new SASCAR.obterMacroTd40Request();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.satelital = satelital;
+            SASCAR.obterMacroTd40Response retVal = ((SASCAR.SasIntegraWS)(this)).obterMacroTd40(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterMacroTd40Response> SASCAR.SasIntegraWS.obterMacroTd40Async(SASCAR.obterMacroTd40Request request)
         {
             return base.Channel.obterMacroTd40Async(request);
@@ -18316,6 +19365,21 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterMacroTms3Response SASCAR.SasIntegraWS.obterMacroTms3(SASCAR.obterMacroTms3Request request)
+        {
+            return base.Channel.obterMacroTms3(request);
+        }
+        
+        public SASCAR.macroTms3[] obterMacroTms3(string usuario, string senha)
+        {
+            SASCAR.obterMacroTms3Request inValue = new SASCAR.obterMacroTms3Request();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            SASCAR.obterMacroTms3Response retVal = ((SASCAR.SasIntegraWS)(this)).obterMacroTms3(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterMacroTms3Response> SASCAR.SasIntegraWS.obterMacroTms3Async(SASCAR.obterMacroTms3Request request)
         {
             return base.Channel.obterMacroTms3Async(request);
@@ -18327,6 +19391,22 @@ namespace SASCAR
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((SASCAR.SasIntegraWS)(this)).obterMacroTms3Async(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterMascaraDispositivosResponse SASCAR.SasIntegraWS.obterMascaraDispositivos(SASCAR.obterMascaraDispositivosRequest request)
+        {
+            return base.Channel.obterMascaraDispositivos(request);
+        }
+        
+        public SASCAR.mascaraDispositivo[] obterMascaraDispositivos(string usuario, string senha, int idVeiculo)
+        {
+            SASCAR.obterMascaraDispositivosRequest inValue = new SASCAR.obterMascaraDispositivosRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterMascaraDispositivosResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterMascaraDispositivos(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18345,6 +19425,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterLayoutResponse SASCAR.SasIntegraWS.obterLayout(SASCAR.obterLayoutRequest request)
+        {
+            return base.Channel.obterLayout(request);
+        }
+        
+        public SASCAR.layout[] obterLayout(string usuario, string senha, SASCAR.tipoLayout layout)
+        {
+            SASCAR.obterLayoutRequest inValue = new SASCAR.obterLayoutRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.layout = layout;
+            SASCAR.obterLayoutResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterLayout(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterLayoutResponse> SASCAR.SasIntegraWS.obterLayoutAsync(SASCAR.obterLayoutRequest request)
         {
             return base.Channel.obterLayoutAsync(request);
@@ -18360,6 +19456,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterLayoutDataResponse SASCAR.SasIntegraWS.obterLayoutData(SASCAR.obterLayoutDataRequest request)
+        {
+            return base.Channel.obterLayoutData(request);
+        }
+        
+        public SASCAR.layout[] obterLayoutData(string usuario, string senha, SASCAR.tipoLayout layout)
+        {
+            SASCAR.obterLayoutDataRequest inValue = new SASCAR.obterLayoutDataRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.layout = layout;
+            SASCAR.obterLayoutDataResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterLayoutData(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterLayoutDataResponse> SASCAR.SasIntegraWS.obterLayoutDataAsync(SASCAR.obterLayoutDataRequest request)
         {
             return base.Channel.obterLayoutDataAsync(request);
@@ -18372,6 +19484,24 @@ namespace SASCAR
             inValue.senha = senha;
             inValue.layout = layout;
             return ((SASCAR.SasIntegraWS)(this)).obterLayoutDataAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterLayoutDetalhadoResponse SASCAR.SasIntegraWS.obterLayoutDetalhado(SASCAR.obterLayoutDetalhadoRequest request)
+        {
+            return base.Channel.obterLayoutDetalhado(request);
+        }
+        
+        public SASCAR.layoutDetalhado[] obterLayoutDetalhado(string usuario, string senha, SASCAR.tipoLayout layout, int idLayout, string dataReferencia)
+        {
+            SASCAR.obterLayoutDetalhadoRequest inValue = new SASCAR.obterLayoutDetalhadoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.layout = layout;
+            inValue.idLayout = idLayout;
+            inValue.dataReferencia = dataReferencia;
+            SASCAR.obterLayoutDetalhadoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterLayoutDetalhado(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18392,6 +19522,23 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterVeiculosResponse SASCAR.SasIntegraWS.obterVeiculos(SASCAR.obterVeiculosRequest request)
+        {
+            return base.Channel.obterVeiculos(request);
+        }
+        
+        public SASCAR.veiculo[] obterVeiculos(string usuario, string senha, int quantidade, int idVeiculo)
+        {
+            SASCAR.obterVeiculosRequest inValue = new SASCAR.obterVeiculosRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterVeiculosResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterVeiculos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterVeiculosResponse> SASCAR.SasIntegraWS.obterVeiculosAsync(SASCAR.obterVeiculosRequest request)
         {
             return base.Channel.obterVeiculosAsync(request);
@@ -18408,6 +19555,21 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterLayoutAreaAvdResponse SASCAR.SasIntegraWS.obterLayoutAreaAvd(SASCAR.obterLayoutAreaAvdRequest request)
+        {
+            return base.Channel.obterLayoutAreaAvd(request);
+        }
+        
+        public SASCAR.layoutGrupoAreaAvd[] obterLayoutAreaAvd(string usuario, string senha)
+        {
+            SASCAR.obterLayoutAreaAvdRequest inValue = new SASCAR.obterLayoutAreaAvdRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            SASCAR.obterLayoutAreaAvdResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterLayoutAreaAvd(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterLayoutAreaAvdResponse> SASCAR.SasIntegraWS.obterLayoutAreaAvdAsync(SASCAR.obterLayoutAreaAvdRequest request)
         {
             return base.Channel.obterLayoutAreaAvdAsync(request);
@@ -18419,6 +19581,23 @@ namespace SASCAR
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((SASCAR.SasIntegraWS)(this)).obterLayoutAreaAvdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterVeiculosRFNacionalResponse SASCAR.SasIntegraWS.obterVeiculosRFNacional(SASCAR.obterVeiculosRFNacionalRequest request)
+        {
+            return base.Channel.obterVeiculosRFNacional(request);
+        }
+        
+        public SASCAR.veiculo[] obterVeiculosRFNacional(string usuario, string senha, int quantidade, int idVeiculo)
+        {
+            SASCAR.obterVeiculosRFNacionalRequest inValue = new SASCAR.obterVeiculosRFNacionalRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterVeiculosRFNacionalResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterVeiculosRFNacional(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18438,6 +19617,23 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterVeiculosJsonResponse SASCAR.SasIntegraWS.obterVeiculosJson(SASCAR.obterVeiculosJsonRequest request)
+        {
+            return base.Channel.obterVeiculosJson(request);
+        }
+        
+        public string[] obterVeiculosJson(string usuario, string senha, int quantidade, int idVeiculo)
+        {
+            SASCAR.obterVeiculosJsonRequest inValue = new SASCAR.obterVeiculosJsonRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterVeiculosJsonResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterVeiculosJson(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterVeiculosJsonResponse> SASCAR.SasIntegraWS.obterVeiculosJsonAsync(SASCAR.obterVeiculosJsonRequest request)
         {
             return base.Channel.obterVeiculosJsonAsync(request);
@@ -18451,6 +19647,21 @@ namespace SASCAR
             inValue.quantidade = quantidade;
             inValue.idVeiculo = idVeiculo;
             return ((SASCAR.SasIntegraWS)(this)).obterVeiculosJsonAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPontosReferenciaResponse SASCAR.SasIntegraWS.obterPontosReferencia(SASCAR.obterPontosReferenciaRequest request)
+        {
+            return base.Channel.obterPontosReferencia(request);
+        }
+        
+        public SASCAR.pontoReferencia[] obterPontosReferencia(string usuario, string senha)
+        {
+            SASCAR.obterPontosReferenciaRequest inValue = new SASCAR.obterPontosReferenciaRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            SASCAR.obterPontosReferenciaResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPontosReferencia(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18468,6 +19679,21 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterSequenciamentoEventoResponse SASCAR.SasIntegraWS.obterSequenciamentoEvento(SASCAR.obterSequenciamentoEventoRequest request)
+        {
+            return base.Channel.obterSequenciamentoEvento(request);
+        }
+        
+        public SASCAR.sequenciamentoEvento[] obterSequenciamentoEvento(string usuario, string senha)
+        {
+            SASCAR.obterSequenciamentoEventoRequest inValue = new SASCAR.obterSequenciamentoEventoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            SASCAR.obterSequenciamentoEventoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterSequenciamentoEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterSequenciamentoEventoResponse> SASCAR.SasIntegraWS.obterSequenciamentoEventoAsync(SASCAR.obterSequenciamentoEventoRequest request)
         {
             return base.Channel.obterSequenciamentoEventoAsync(request);
@@ -18479,6 +19705,22 @@ namespace SASCAR
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((SASCAR.SasIntegraWS)(this)).obterSequenciamentoEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterMensagemPortalResponse SASCAR.SasIntegraWS.obterMensagemPortal(SASCAR.obterMensagemPortalRequest request)
+        {
+            return base.Channel.obterMensagemPortal(request);
+        }
+        
+        public SASCAR.mensagem obterMensagemPortal(string usuario, string senha, int idVeiculo)
+        {
+            SASCAR.obterMensagemPortalRequest inValue = new SASCAR.obterMensagemPortalRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterMensagemPortalResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterMensagemPortal(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18497,6 +19739,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterTelemetriaPortalResponse SASCAR.SasIntegraWS.obterTelemetriaPortal(SASCAR.obterTelemetriaPortalRequest request)
+        {
+            return base.Channel.obterTelemetriaPortal(request);
+        }
+        
+        public SASCAR.telemetria obterTelemetriaPortal(string usuario, string senha, int idVeiculo)
+        {
+            SASCAR.obterTelemetriaPortalRequest inValue = new SASCAR.obterTelemetriaPortalRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterTelemetriaPortalResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterTelemetriaPortal(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterTelemetriaPortalResponse> SASCAR.SasIntegraWS.obterTelemetriaPortalAsync(SASCAR.obterTelemetriaPortalRequest request)
         {
             return base.Channel.obterTelemetriaPortalAsync(request);
@@ -18509,6 +19767,23 @@ namespace SASCAR
             inValue.senha = senha;
             inValue.idVeiculo = idVeiculo;
             return ((SASCAR.SasIntegraWS)(this)).obterTelemetriaPortalAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterEnderecoPosicaoResponse SASCAR.SasIntegraWS.obterEnderecoPosicao(SASCAR.obterEnderecoPosicaoRequest request)
+        {
+            return base.Channel.obterEnderecoPosicao(request);
+        }
+        
+        public SASCAR.enderecoPosicao obterEnderecoPosicao(string usuario, string senha, string latitude, string longitude)
+        {
+            SASCAR.obterEnderecoPosicaoRequest inValue = new SASCAR.obterEnderecoPosicaoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.latitude = latitude;
+            inValue.longitude = longitude;
+            SASCAR.obterEnderecoPosicaoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterEnderecoPosicao(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18528,6 +19803,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.verificarVeiculoIntegradoResponse SASCAR.SasIntegraWS.verificarVeiculoIntegrado(SASCAR.verificarVeiculoIntegradoRequest request)
+        {
+            return base.Channel.verificarVeiculoIntegrado(request);
+        }
+        
+        public bool verificarVeiculoIntegrado(string usuario, string senha, int idVeiculo)
+        {
+            SASCAR.verificarVeiculoIntegradoRequest inValue = new SASCAR.verificarVeiculoIntegradoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.verificarVeiculoIntegradoResponse retVal = ((SASCAR.SasIntegraWS)(this)).verificarVeiculoIntegrado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.verificarVeiculoIntegradoResponse> SASCAR.SasIntegraWS.verificarVeiculoIntegradoAsync(SASCAR.verificarVeiculoIntegradoRequest request)
         {
             return base.Channel.verificarVeiculoIntegradoAsync(request);
@@ -18543,6 +19834,21 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterLayoutAcaoEmbarcadaAVDResponse SASCAR.SasIntegraWS.obterLayoutAcaoEmbarcadaAVD(SASCAR.obterLayoutAcaoEmbarcadaAVDRequest request)
+        {
+            return base.Channel.obterLayoutAcaoEmbarcadaAVD(request);
+        }
+        
+        public SASCAR.layoutAcaoEmbarcadaAVD[] obterLayoutAcaoEmbarcadaAVD(string usuario, string senha)
+        {
+            SASCAR.obterLayoutAcaoEmbarcadaAVDRequest inValue = new SASCAR.obterLayoutAcaoEmbarcadaAVDRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            SASCAR.obterLayoutAcaoEmbarcadaAVDResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterLayoutAcaoEmbarcadaAVD(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterLayoutAcaoEmbarcadaAVDResponse> SASCAR.SasIntegraWS.obterLayoutAcaoEmbarcadaAVDAsync(SASCAR.obterLayoutAcaoEmbarcadaAVDRequest request)
         {
             return base.Channel.obterLayoutAcaoEmbarcadaAVDAsync(request);
@@ -18554,6 +19860,23 @@ namespace SASCAR
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((SASCAR.SasIntegraWS)(this)).obterLayoutAcaoEmbarcadaAVDAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.comandoEmbarquePontoDiarioResponse SASCAR.SasIntegraWS.comandoEmbarquePontoDiario(SASCAR.comandoEmbarquePontoDiarioRequest request)
+        {
+            return base.Channel.comandoEmbarquePontoDiario(request);
+        }
+        
+        public SASCAR.logComando comandoEmbarquePontoDiario(string usuario, string senha, int idVeiculo, string pontosRef)
+        {
+            SASCAR.comandoEmbarquePontoDiarioRequest inValue = new SASCAR.comandoEmbarquePontoDiarioRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.idVeiculo = idVeiculo;
+            inValue.pontosRef = pontosRef;
+            SASCAR.comandoEmbarquePontoDiarioResponse retVal = ((SASCAR.SasIntegraWS)(this)).comandoEmbarquePontoDiario(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18573,6 +19896,21 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterEventoTelemetriaDescricaoResponse SASCAR.SasIntegraWS.obterEventoTelemetriaDescricao(SASCAR.obterEventoTelemetriaDescricaoRequest request)
+        {
+            return base.Channel.obterEventoTelemetriaDescricao(request);
+        }
+        
+        public SASCAR.tipoEventoTelemetriaDescricao[] obterEventoTelemetriaDescricao(string usuario, string senha)
+        {
+            SASCAR.obterEventoTelemetriaDescricaoRequest inValue = new SASCAR.obterEventoTelemetriaDescricaoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            SASCAR.obterEventoTelemetriaDescricaoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterEventoTelemetriaDescricao(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterEventoTelemetriaDescricaoResponse> SASCAR.SasIntegraWS.obterEventoTelemetriaDescricaoAsync(SASCAR.obterEventoTelemetriaDescricaoRequest request)
         {
             return base.Channel.obterEventoTelemetriaDescricaoAsync(request);
@@ -18584,6 +19922,25 @@ namespace SASCAR
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((SASCAR.SasIntegraWS)(this)).obterEventoTelemetriaDescricaoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterEventoTelemetriaIntegracaoResponse SASCAR.SasIntegraWS.obterEventoTelemetriaIntegracao(SASCAR.obterEventoTelemetriaIntegracaoRequest request)
+        {
+            return base.Channel.obterEventoTelemetriaIntegracao(request);
+        }
+        
+        public SASCAR.eventoTelemetria[] obterEventoTelemetriaIntegracao(string usuario, string senha, string dataInicio, string dataFinal, int idVeiculo, int[] idEventoList)
+        {
+            SASCAR.obterEventoTelemetriaIntegracaoRequest inValue = new SASCAR.obterEventoTelemetriaIntegracaoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.dataInicio = dataInicio;
+            inValue.dataFinal = dataFinal;
+            inValue.idVeiculo = idVeiculo;
+            inValue.idEventoList = idEventoList;
+            SASCAR.obterEventoTelemetriaIntegracaoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterEventoTelemetriaIntegracao(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18605,6 +19962,25 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterEventoTelemetriaIntegracaoDataChegadaResponse SASCAR.SasIntegraWS.obterEventoTelemetriaIntegracaoDataChegada(SASCAR.obterEventoTelemetriaIntegracaoDataChegadaRequest request)
+        {
+            return base.Channel.obterEventoTelemetriaIntegracaoDataChegada(request);
+        }
+        
+        public SASCAR.eventoTelemetriaDataChegada[] obterEventoTelemetriaIntegracaoDataChegada(string usuario, string senha, string dataInicio, string dataFinal, int idVeiculo, int[] idEventoList)
+        {
+            SASCAR.obterEventoTelemetriaIntegracaoDataChegadaRequest inValue = new SASCAR.obterEventoTelemetriaIntegracaoDataChegadaRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.dataInicio = dataInicio;
+            inValue.dataFinal = dataFinal;
+            inValue.idVeiculo = idVeiculo;
+            inValue.idEventoList = idEventoList;
+            SASCAR.obterEventoTelemetriaIntegracaoDataChegadaResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterEventoTelemetriaIntegracaoDataChegada(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterEventoTelemetriaIntegracaoDataChegadaResponse> SASCAR.SasIntegraWS.obterEventoTelemetriaIntegracaoDataChegadaAsync(SASCAR.obterEventoTelemetriaIntegracaoDataChegadaRequest request)
         {
             return base.Channel.obterEventoTelemetriaIntegracaoDataChegadaAsync(request);
@@ -18620,6 +19996,24 @@ namespace SASCAR
             inValue.idVeiculo = idVeiculo;
             inValue.idEventoList = idEventoList;
             return ((SASCAR.SasIntegraWS)(this)).obterEventoTelemetriaIntegracaoDataChegadaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterDeltaTelemetriaIntegracaoResponse SASCAR.SasIntegraWS.obterDeltaTelemetriaIntegracao(SASCAR.obterDeltaTelemetriaIntegracaoRequest request)
+        {
+            return base.Channel.obterDeltaTelemetriaIntegracao(request);
+        }
+        
+        public SASCAR.deltaTelemetria[] obterDeltaTelemetriaIntegracao(string usuario, string senha, string dataInicio, string dataFinal, int idVeiculo)
+        {
+            SASCAR.obterDeltaTelemetriaIntegracaoRequest inValue = new SASCAR.obterDeltaTelemetriaIntegracaoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.dataInicio = dataInicio;
+            inValue.dataFinal = dataFinal;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterDeltaTelemetriaIntegracaoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterDeltaTelemetriaIntegracao(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18640,6 +20034,24 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterDeltaTelemetriaIntegracaoDataChegadaResponse SASCAR.SasIntegraWS.obterDeltaTelemetriaIntegracaoDataChegada(SASCAR.obterDeltaTelemetriaIntegracaoDataChegadaRequest request)
+        {
+            return base.Channel.obterDeltaTelemetriaIntegracaoDataChegada(request);
+        }
+        
+        public SASCAR.deltaTelemetriaDataChegada[] obterDeltaTelemetriaIntegracaoDataChegada(string usuario, string senha, string dataInicio, string dataFinal, int idVeiculo)
+        {
+            SASCAR.obterDeltaTelemetriaIntegracaoDataChegadaRequest inValue = new SASCAR.obterDeltaTelemetriaIntegracaoDataChegadaRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.dataInicio = dataInicio;
+            inValue.dataFinal = dataFinal;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterDeltaTelemetriaIntegracaoDataChegadaResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterDeltaTelemetriaIntegracaoDataChegada(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterDeltaTelemetriaIntegracaoDataChegadaResponse> SASCAR.SasIntegraWS.obterDeltaTelemetriaIntegracaoDataChegadaAsync(SASCAR.obterDeltaTelemetriaIntegracaoDataChegadaRequest request)
         {
             return base.Channel.obterDeltaTelemetriaIntegracaoDataChegadaAsync(request);
@@ -18654,6 +20066,23 @@ namespace SASCAR
             inValue.dataFinal = dataFinal;
             inValue.idVeiculo = idVeiculo;
             return ((SASCAR.SasIntegraWS)(this)).obterDeltaTelemetriaIntegracaoDataChegadaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.enviarParametrizacaoTelemetriaResponse SASCAR.SasIntegraWS.enviarParametrizacaoTelemetria(SASCAR.enviarParametrizacaoTelemetriaRequest request)
+        {
+            return base.Channel.enviarParametrizacaoTelemetria(request);
+        }
+        
+        public SASCAR.comandoTelemetriaRetorno[] enviarParametrizacaoTelemetria(string usuario, string senha, int idVeiculo, SASCAR.telemetriaConfiguracao telemetriaParametrizacao)
+        {
+            SASCAR.enviarParametrizacaoTelemetriaRequest inValue = new SASCAR.enviarParametrizacaoTelemetriaRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.idVeiculo = idVeiculo;
+            inValue.telemetriaParametrizacao = telemetriaParametrizacao;
+            SASCAR.enviarParametrizacaoTelemetriaResponse retVal = ((SASCAR.SasIntegraWS)(this)).enviarParametrizacaoTelemetria(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18673,6 +20102,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterDadosAdicionaisResponse SASCAR.SasIntegraWS.obterDadosAdicionais(SASCAR.obterDadosAdicionaisRequest request)
+        {
+            return base.Channel.obterDadosAdicionais(request);
+        }
+        
+        public SASCAR.dadosAdicionais[] obterDadosAdicionais(string usuario, string senha, int idVeiculo)
+        {
+            SASCAR.obterDadosAdicionaisRequest inValue = new SASCAR.obterDadosAdicionaisRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterDadosAdicionaisResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterDadosAdicionais(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterDadosAdicionaisResponse> SASCAR.SasIntegraWS.obterDadosAdicionaisAsync(SASCAR.obterDadosAdicionaisRequest request)
         {
             return base.Channel.obterDadosAdicionaisAsync(request);
@@ -18688,6 +20133,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterDadosAdicionaisClienteResponse SASCAR.SasIntegraWS.obterDadosAdicionaisCliente(SASCAR.obterDadosAdicionaisClienteRequest request)
+        {
+            return base.Channel.obterDadosAdicionaisCliente(request);
+        }
+        
+        public SASCAR.dadosAdicionais[] obterDadosAdicionaisCliente(string usuario, string senha, int idVeiculo)
+        {
+            SASCAR.obterDadosAdicionaisClienteRequest inValue = new SASCAR.obterDadosAdicionaisClienteRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterDadosAdicionaisClienteResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterDadosAdicionaisCliente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterDadosAdicionaisClienteResponse> SASCAR.SasIntegraWS.obterDadosAdicionaisClienteAsync(SASCAR.obterDadosAdicionaisClienteRequest request)
         {
             return base.Channel.obterDadosAdicionaisClienteAsync(request);
@@ -18700,6 +20161,25 @@ namespace SASCAR
             inValue.senha = senha;
             inValue.idVeiculo = idVeiculo;
             return ((SASCAR.SasIntegraWS)(this)).obterDadosAdicionaisClienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterEventosTempoDirecaoResponse SASCAR.SasIntegraWS.obterEventosTempoDirecao(SASCAR.obterEventosTempoDirecaoRequest request)
+        {
+            return base.Channel.obterEventosTempoDirecao(request);
+        }
+        
+        public SASCAR.eventoTempoDirecao[] obterEventosTempoDirecao(string usuario, string senha, int quantidade, int idMotorista, string dataInicio, string dataFim)
+        {
+            SASCAR.obterEventosTempoDirecaoRequest inValue = new SASCAR.obterEventosTempoDirecaoRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            inValue.idMotorista = idMotorista;
+            inValue.dataInicio = dataInicio;
+            inValue.dataFim = dataFim;
+            SASCAR.obterEventosTempoDirecaoResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterEventosTempoDirecao(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18721,6 +20201,25 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterEventosTempoDirecaoDataChegadaResponse SASCAR.SasIntegraWS.obterEventosTempoDirecaoDataChegada(SASCAR.obterEventosTempoDirecaoDataChegadaRequest request)
+        {
+            return base.Channel.obterEventosTempoDirecaoDataChegada(request);
+        }
+        
+        public SASCAR.eventoTempoDirecaoDataChegada[] obterEventosTempoDirecaoDataChegada(string usuario, string senha, int quantidade, int idMotorista, string dataInicio, string dataFim)
+        {
+            SASCAR.obterEventosTempoDirecaoDataChegadaRequest inValue = new SASCAR.obterEventosTempoDirecaoDataChegadaRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            inValue.idMotorista = idMotorista;
+            inValue.dataInicio = dataInicio;
+            inValue.dataFim = dataFim;
+            SASCAR.obterEventosTempoDirecaoDataChegadaResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterEventosTempoDirecaoDataChegada(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterEventosTempoDirecaoDataChegadaResponse> SASCAR.SasIntegraWS.obterEventosTempoDirecaoDataChegadaAsync(SASCAR.obterEventosTempoDirecaoDataChegadaRequest request)
         {
             return base.Channel.obterEventosTempoDirecaoDataChegadaAsync(request);
@@ -18736,6 +20235,26 @@ namespace SASCAR
             inValue.dataInicio = dataInicio;
             inValue.dataFim = dataFim;
             return ((SASCAR.SasIntegraWS)(this)).obterEventosTempoDirecaoDataChegadaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.solicitarEventosCaixaPretaResponse SASCAR.SasIntegraWS.solicitarEventosCaixaPreta(SASCAR.solicitarEventosCaixaPretaRequest request)
+        {
+            return base.Channel.solicitarEventosCaixaPreta(request);
+        }
+        
+        public string solicitarEventosCaixaPreta(string usuario, string senha, string idVeiculo, string placa, string dataPosicaoInicial, string dataPosicaoFinal, string ticket)
+        {
+            SASCAR.solicitarEventosCaixaPretaRequest inValue = new SASCAR.solicitarEventosCaixaPretaRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.idVeiculo = idVeiculo;
+            inValue.placa = placa;
+            inValue.dataPosicaoInicial = dataPosicaoInicial;
+            inValue.dataPosicaoFinal = dataPosicaoFinal;
+            inValue.ticket = ticket;
+            SASCAR.solicitarEventosCaixaPretaResponse retVal = ((SASCAR.SasIntegraWS)(this)).solicitarEventosCaixaPreta(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18758,6 +20277,24 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.recuperarEventosCaixaPretaResponse SASCAR.SasIntegraWS.recuperarEventosCaixaPreta(SASCAR.recuperarEventosCaixaPretaRequest request)
+        {
+            return base.Channel.recuperarEventosCaixaPreta(request);
+        }
+        
+        public SASCAR.caixaPreta[] recuperarEventosCaixaPreta(string usuario, string senha, string placa, string idVeiculo, string dataPosicao)
+        {
+            SASCAR.recuperarEventosCaixaPretaRequest inValue = new SASCAR.recuperarEventosCaixaPretaRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.placa = placa;
+            inValue.idVeiculo = idVeiculo;
+            inValue.dataPosicao = dataPosicao;
+            SASCAR.recuperarEventosCaixaPretaResponse retVal = ((SASCAR.SasIntegraWS)(this)).recuperarEventosCaixaPreta(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.recuperarEventosCaixaPretaResponse> SASCAR.SasIntegraWS.recuperarEventosCaixaPretaAsync(SASCAR.recuperarEventosCaixaPretaRequest request)
         {
             return base.Channel.recuperarEventosCaixaPretaAsync(request);
@@ -18775,6 +20312,21 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.consultaQuantidadePacotesPosicoesPendentesResponse SASCAR.SasIntegraWS.consultaQuantidadePacotesPosicoesPendentes(SASCAR.consultaQuantidadePacotesPosicoesPendentesRequest request)
+        {
+            return base.Channel.consultaQuantidadePacotesPosicoesPendentes(request);
+        }
+        
+        public SASCAR.pacotePendente consultaQuantidadePacotesPosicoesPendentes(string usuario, string senha)
+        {
+            SASCAR.consultaQuantidadePacotesPosicoesPendentesRequest inValue = new SASCAR.consultaQuantidadePacotesPosicoesPendentesRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            SASCAR.consultaQuantidadePacotesPosicoesPendentesResponse retVal = ((SASCAR.SasIntegraWS)(this)).consultaQuantidadePacotesPosicoesPendentes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.consultaQuantidadePacotesPosicoesPendentesResponse> SASCAR.SasIntegraWS.consultaQuantidadePacotesPosicoesPendentesAsync(SASCAR.consultaQuantidadePacotesPosicoesPendentesRequest request)
         {
             return base.Channel.consultaQuantidadePacotesPosicoesPendentesAsync(request);
@@ -18786,6 +20338,22 @@ namespace SASCAR
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((SASCAR.SasIntegraWS)(this)).consultaQuantidadePacotesPosicoesPendentesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterPacoteIntegracaoDeltatelemetriaResponse SASCAR.SasIntegraWS.obterPacoteIntegracaoDeltatelemetria(SASCAR.obterPacoteIntegracaoDeltatelemetriaRequest request)
+        {
+            return base.Channel.obterPacoteIntegracaoDeltatelemetria(request);
+        }
+        
+        public SASCAR.deltaTelemetria[] obterPacoteIntegracaoDeltatelemetria(string usuario, string senha, int quantidade)
+        {
+            SASCAR.obterPacoteIntegracaoDeltatelemetriaRequest inValue = new SASCAR.obterPacoteIntegracaoDeltatelemetriaRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.quantidade = quantidade;
+            SASCAR.obterPacoteIntegracaoDeltatelemetriaResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterPacoteIntegracaoDeltatelemetria(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18804,6 +20372,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.getPositionsPacketJSONResponse SASCAR.SasIntegraWS.getPositionsPacketJSON(SASCAR.getPositionsPacketJSONRequest request)
+        {
+            return base.Channel.getPositionsPacketJSON(request);
+        }
+        
+        public string[] getPositionsPacketJSON(string user, string password, int quantity)
+        {
+            SASCAR.getPositionsPacketJSONRequest inValue = new SASCAR.getPositionsPacketJSONRequest();
+            inValue.user = user;
+            inValue.password = password;
+            inValue.quantity = quantity;
+            SASCAR.getPositionsPacketJSONResponse retVal = ((SASCAR.SasIntegraWS)(this)).getPositionsPacketJSON(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.getPositionsPacketJSONResponse> SASCAR.SasIntegraWS.getPositionsPacketJSONAsync(SASCAR.getPositionsPacketJSONRequest request)
         {
             return base.Channel.getPositionsPacketJSONAsync(request);
@@ -18819,6 +20403,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.getDriverPositionPacketJSONResponse SASCAR.SasIntegraWS.getDriverPositionPacketJSON(SASCAR.getDriverPositionPacketJSONRequest request)
+        {
+            return base.Channel.getDriverPositionPacketJSON(request);
+        }
+        
+        public string[] getDriverPositionPacketJSON(string user, string password, int quantity)
+        {
+            SASCAR.getDriverPositionPacketJSONRequest inValue = new SASCAR.getDriverPositionPacketJSONRequest();
+            inValue.user = user;
+            inValue.password = password;
+            inValue.quantity = quantity;
+            SASCAR.getDriverPositionPacketJSONResponse retVal = ((SASCAR.SasIntegraWS)(this)).getDriverPositionPacketJSON(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.getDriverPositionPacketJSONResponse> SASCAR.SasIntegraWS.getDriverPositionPacketJSONAsync(SASCAR.getDriverPositionPacketJSONRequest request)
         {
             return base.Channel.getDriverPositionPacketJSONAsync(request);
@@ -18831,6 +20431,24 @@ namespace SASCAR
             inValue.password = password;
             inValue.quantity = quantity;
             return ((SASCAR.SasIntegraWS)(this)).getDriverPositionPacketJSONAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.getPositionPacketByRangeJSONResponse SASCAR.SasIntegraWS.getPositionPacketByRangeJSON(SASCAR.getPositionPacketByRangeJSONRequest request)
+        {
+            return base.Channel.getPositionPacketByRangeJSON(request);
+        }
+        
+        public string[] getPositionPacketByRangeJSON(string user, string password, long startId, long endId, int quantity)
+        {
+            SASCAR.getPositionPacketByRangeJSONRequest inValue = new SASCAR.getPositionPacketByRangeJSONRequest();
+            inValue.user = user;
+            inValue.password = password;
+            inValue.startId = startId;
+            inValue.endId = endId;
+            inValue.quantity = quantity;
+            SASCAR.getPositionPacketByRangeJSONResponse retVal = ((SASCAR.SasIntegraWS)(this)).getPositionPacketByRangeJSON(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18851,6 +20469,24 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.getDriverPositionPacketByRangeJSONResponse SASCAR.SasIntegraWS.getDriverPositionPacketByRangeJSON(SASCAR.getDriverPositionPacketByRangeJSONRequest request)
+        {
+            return base.Channel.getDriverPositionPacketByRangeJSON(request);
+        }
+        
+        public string[] getDriverPositionPacketByRangeJSON(string user, string password, long startId, long endId, int quantity)
+        {
+            SASCAR.getDriverPositionPacketByRangeJSONRequest inValue = new SASCAR.getDriverPositionPacketByRangeJSONRequest();
+            inValue.user = user;
+            inValue.password = password;
+            inValue.startId = startId;
+            inValue.endId = endId;
+            inValue.quantity = quantity;
+            SASCAR.getDriverPositionPacketByRangeJSONResponse retVal = ((SASCAR.SasIntegraWS)(this)).getDriverPositionPacketByRangeJSON(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.getDriverPositionPacketByRangeJSONResponse> SASCAR.SasIntegraWS.getDriverPositionPacketByRangeJSONAsync(SASCAR.getDriverPositionPacketByRangeJSONRequest request)
         {
             return base.Channel.getDriverPositionPacketByRangeJSONAsync(request);
@@ -18865,6 +20501,23 @@ namespace SASCAR
             inValue.endId = endId;
             inValue.quantity = quantity;
             return ((SASCAR.SasIntegraWS)(this)).getDriverPositionPacketByRangeJSONAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.getVehiclesJSONResponse SASCAR.SasIntegraWS.getVehiclesJSON(SASCAR.getVehiclesJSONRequest request)
+        {
+            return base.Channel.getVehiclesJSON(request);
+        }
+        
+        public string[] getVehiclesJSON(string user, string password, int quantity, int vehicleId)
+        {
+            SASCAR.getVehiclesJSONRequest inValue = new SASCAR.getVehiclesJSONRequest();
+            inValue.user = user;
+            inValue.password = password;
+            inValue.quantity = quantity;
+            inValue.vehicleId = vehicleId;
+            SASCAR.getVehiclesJSONResponse retVal = ((SASCAR.SasIntegraWS)(this)).getVehiclesJSON(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18884,6 +20537,22 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.getPositionPacketWithLicensePlateJSONResponse SASCAR.SasIntegraWS.getPositionPacketWithLicensePlateJSON(SASCAR.getPositionPacketWithLicensePlateJSONRequest request)
+        {
+            return base.Channel.getPositionPacketWithLicensePlateJSON(request);
+        }
+        
+        public string[] getPositionPacketWithLicensePlateJSON(string user, string password, int quantity)
+        {
+            SASCAR.getPositionPacketWithLicensePlateJSONRequest inValue = new SASCAR.getPositionPacketWithLicensePlateJSONRequest();
+            inValue.user = user;
+            inValue.password = password;
+            inValue.quantity = quantity;
+            SASCAR.getPositionPacketWithLicensePlateJSONResponse retVal = ((SASCAR.SasIntegraWS)(this)).getPositionPacketWithLicensePlateJSON(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.getPositionPacketWithLicensePlateJSONResponse> SASCAR.SasIntegraWS.getPositionPacketWithLicensePlateJSONAsync(SASCAR.getPositionPacketWithLicensePlateJSONRequest request)
         {
             return base.Channel.getPositionPacketWithLicensePlateJSONAsync(request);
@@ -18896,6 +20565,24 @@ namespace SASCAR
             inValue.password = password;
             inValue.quantity = quantity;
             return ((SASCAR.SasIntegraWS)(this)).getPositionPacketWithLicensePlateJSONAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterDeltaTelemetriaIntegracaoInerciaResponse SASCAR.SasIntegraWS.obterDeltaTelemetriaIntegracaoInercia(SASCAR.obterDeltaTelemetriaIntegracaoInerciaRequest request)
+        {
+            return base.Channel.obterDeltaTelemetriaIntegracaoInercia(request);
+        }
+        
+        public SASCAR.deltaTelemetria[] obterDeltaTelemetriaIntegracaoInercia(string usuario, string senha, string dataInicio, string dataFinal, int idVeiculo)
+        {
+            SASCAR.obterDeltaTelemetriaIntegracaoInerciaRequest inValue = new SASCAR.obterDeltaTelemetriaIntegracaoInerciaRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.dataInicio = dataInicio;
+            inValue.dataFinal = dataFinal;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterDeltaTelemetriaIntegracaoInerciaResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterDeltaTelemetriaIntegracaoInercia(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18916,6 +20603,24 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterDeltaTelemetriaIntegracaoInerciaDataChegadaResponse SASCAR.SasIntegraWS.obterDeltaTelemetriaIntegracaoInerciaDataChegada(SASCAR.obterDeltaTelemetriaIntegracaoInerciaDataChegadaRequest request)
+        {
+            return base.Channel.obterDeltaTelemetriaIntegracaoInerciaDataChegada(request);
+        }
+        
+        public SASCAR.deltaTelemetriaDataChegada[] obterDeltaTelemetriaIntegracaoInerciaDataChegada(string usuario, string senha, string dataInicio, string dataFinal, int idVeiculo)
+        {
+            SASCAR.obterDeltaTelemetriaIntegracaoInerciaDataChegadaRequest inValue = new SASCAR.obterDeltaTelemetriaIntegracaoInerciaDataChegadaRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.dataInicio = dataInicio;
+            inValue.dataFinal = dataFinal;
+            inValue.idVeiculo = idVeiculo;
+            SASCAR.obterDeltaTelemetriaIntegracaoInerciaDataChegadaResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterDeltaTelemetriaIntegracaoInerciaDataChegada(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterDeltaTelemetriaIntegracaoInerciaDataChegadaResponse> SASCAR.SasIntegraWS.obterDeltaTelemetriaIntegracaoInerciaDataChegadaAsync(SASCAR.obterDeltaTelemetriaIntegracaoInerciaDataChegadaRequest request)
         {
             return base.Channel.obterDeltaTelemetriaIntegracaoInerciaDataChegadaAsync(request);
@@ -18930,6 +20635,22 @@ namespace SASCAR
             inValue.dataFinal = dataFinal;
             inValue.idVeiculo = idVeiculo;
             return ((SASCAR.SasIntegraWS)(this)).obterDeltaTelemetriaIntegracaoInerciaDataChegadaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterCadastroAlertasAvdResponse SASCAR.SasIntegraWS.obterCadastroAlertasAvd(SASCAR.obterCadastroAlertasAvdRequest request)
+        {
+            return base.Channel.obterCadastroAlertasAvd(request);
+        }
+        
+        public SASCAR.eventoAlertasAvd[] obterCadastroAlertasAvd(string usuario, string senha, string dataInicio)
+        {
+            SASCAR.obterCadastroAlertasAvdRequest inValue = new SASCAR.obterCadastroAlertasAvdRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.dataInicio = dataInicio;
+            SASCAR.obterCadastroAlertasAvdResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterCadastroAlertasAvd(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -18948,6 +20669,23 @@ namespace SASCAR
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterAlertasAVDVinculadosResponse SASCAR.SasIntegraWS.obterAlertasAVDVinculados(SASCAR.obterAlertasAVDVinculadosRequest request)
+        {
+            return base.Channel.obterAlertasAVDVinculados(request);
+        }
+        
+        public SASCAR.alertasAVDVinculados[] obterAlertasAVDVinculados(string usuario, string senha, string veiplaca, string veioid)
+        {
+            SASCAR.obterAlertasAVDVinculadosRequest inValue = new SASCAR.obterAlertasAVDVinculadosRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.veiplaca = veiplaca;
+            inValue.veioid = veioid;
+            SASCAR.obterAlertasAVDVinculadosResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterAlertasAVDVinculados(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<SASCAR.obterAlertasAVDVinculadosResponse> SASCAR.SasIntegraWS.obterAlertasAVDVinculadosAsync(SASCAR.obterAlertasAVDVinculadosRequest request)
         {
             return base.Channel.obterAlertasAVDVinculadosAsync(request);
@@ -18961,6 +20699,22 @@ namespace SASCAR
             inValue.veiplaca = veiplaca;
             inValue.veioid = veioid;
             return ((SASCAR.SasIntegraWS)(this)).obterAlertasAVDVinculadosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SASCAR.obterRotasResponse SASCAR.SasIntegraWS.obterRotas(SASCAR.obterRotasRequest request)
+        {
+            return base.Channel.obterRotas(request);
+        }
+        
+        public SASCAR.rota[] obterRotas(string usuario, string senha, string dataInicio)
+        {
+            SASCAR.obterRotasRequest inValue = new SASCAR.obterRotasRequest();
+            inValue.usuario = usuario;
+            inValue.senha = senha;
+            inValue.dataInicio = dataInicio;
+            SASCAR.obterRotasResponse retVal = ((SASCAR.SasIntegraWS)(this)).obterRotas(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

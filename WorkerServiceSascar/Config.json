@@ -1,5 +1,9 @@
 {
+  "UserWS": {
+    "Login": "GRFARMOTEC",
+    "Password": "v1ct@321"
+  },
   "horarioRotina": "06:00",
   "DiretorioDestino": "c:\\temp"
-  
+
 }

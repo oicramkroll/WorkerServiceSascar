@@ -13,8 +13,7 @@ namespace ManagerReport
             ConfigureService(serviceCollection);
             var serviceProvider = serviceCollection.BuildServiceProvider();
             var eventService = serviceProvider.GetService<Services.IReportSVC>();
-            Console.WriteLine("Iniciando a aplicação");
-            Console.WriteLine("Precione Ctrl+c para sair da aplicação");
+            Console.WriteLine("Aplicação Iniciada");
 
             Console.CancelKeyPress += delegate (object sender, ConsoleCancelEventArgs e) {
                 e.Cancel = true;
