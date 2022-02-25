@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerServiceSascar", "WorkerServiceSascar\WorkerServiceSascar.csproj", "{1DD2FC5E-9A5C-44CE-9CFB-F3EE755259E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerServiceSascar", "WorkerServiceSascar\WorkerServiceSascar.csproj", "{1DD2FC5E-9A5C-44CE-9CFB-F3EE755259E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{86148D5C-BD22-4923-BB4B-025CE504BA22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{86148D5C-BD22-4923-BB4B-025CE504BA22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelUtil", "ModelUtil\ModelUtil.csproj", "{9DB8CEF8-B702-4096-BC32-660F145B6155}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelUtil", "ModelUtil\ModelUtil.csproj", "{9DB8CEF8-B702-4096-BC32-660F145B6155}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagerReport", "ManagerReport\ManagerReport.csproj", "{BD7A5801-8F14-4E40-B3F4-BC6D744679E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagerReport", "ManagerReport\ManagerReport.csproj", "{BD7A5801-8F14-4E40-B3F4-BC6D744679E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{3C537415-98A6-40E7-B5ED-0F6531019DA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{BD7A5801-8F14-4E40-B3F4-BC6D744679E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD7A5801-8F14-4E40-B3F4-BC6D744679E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD7A5801-8F14-4E40-B3F4-BC6D744679E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C537415-98A6-40E7-B5ED-0F6531019DA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C537415-98A6-40E7-B5ED-0F6531019DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C537415-98A6-40E7-B5ED-0F6531019DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C537415-98A6-40E7-B5ED-0F6531019DA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
