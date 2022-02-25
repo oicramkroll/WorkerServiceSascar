@@ -14,27 +14,37 @@ namespace Services
         {
             currentDirectory = Directory.GetCurrentDirectory();
         }
-        public void Generate() {
-            Console.WriteLine(currentDirectory);
+        public void Generate()
+        {
+            //Console.WriteLine(currentDirectory);
+            DateTime startDate = GetInputDate(
+                "Data de inicio do relatorio com o fomrato 'AAAA-MM-DD 00:00:00'",
+                "Data inválida, tente novamente");
+            Console.WriteLine("Ok");
+            Thread.Sleep(2000);
+            Console.Clear();
+        }
+
+        private static DateTime GetInputDate(string msgLine, string mstErro)
+        {
             DateTime startDate = DateTime.MinValue;
-            while (startDate == DateTime.MinValue )
+            while (startDate == DateTime.MinValue)
             {
                 try
                 {
-                    Console.WriteLine("Data de inicio do relatorio com o fomrato 'AAAA-MM-DD 00:00:00'");
+                    Console.WriteLine(msgLine);
                     var value = Console.ReadLine();
                     startDate = Convert.ToDateTime(value);
 
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("Data inválida, tente novamente");
+                    Console.WriteLine(mstErro);
                     startDate = DateTime.MinValue;
                 }
             }
-            Console.WriteLine("Ok");
-            Thread.Sleep(2000);
-            Console.Clear();
+
+            return startDate;
         }
     }
 }
