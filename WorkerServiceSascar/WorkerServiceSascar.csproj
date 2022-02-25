@@ -15,7 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ManagerReport\ManagerReport.csproj" />
     <ProjectReference Include="..\ModelUtil\ModelUtil.csproj" />
     <ProjectReference Include="..\Services\Services.csproj" />
   </ItemGroup>

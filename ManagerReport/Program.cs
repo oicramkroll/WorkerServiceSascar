@@ -12,7 +12,7 @@ namespace ManagerReport
             var serviceCollection = new ServiceCollection();
             ConfigureService(serviceCollection);
             var serviceProvider = serviceCollection.BuildServiceProvider();
-            var eventService = serviceProvider.GetService<Services.IReportByDates>();
+            var eventService = serviceProvider.GetService<Services.IReportSVC>();
             Console.WriteLine("Iniciando a aplicação");
             Console.WriteLine("Precione Ctrl+c para sair da aplicação");
 
@@ -23,14 +23,15 @@ namespace ManagerReport
             
             while (keepRunning)
             {
-                eventService.Generate();
+                eventService.GenerateByDateInterval();
             }
             Console.WriteLine("Fechando aplicação...");
             
             
         }
         public static void ConfigureService(IServiceCollection services) {
-            services.AddScoped<Services.IReportByDates, Services.ReportByDatesService>();
+            services.AddScoped<Services.IReportSVC, Services.ReportSVCService>();
+            //TODO:Injeção de dependencia para o banco de dados
         }
     }
 }
