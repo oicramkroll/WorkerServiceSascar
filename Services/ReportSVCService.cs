@@ -66,8 +66,9 @@ namespace Services
                 );
             foreach (var item in cars.ToList())
             {
-            //TODO: executar consulta de historico de veiculos.
+                var dirDestity = configs["DiretorioDestino"].ToString();
             //TODO: gerar arquivo para armazenar histórico na pasta de destino informada no arquivo de configuração com o nome sasCar_yyyyMMddHHmm_1.csv .
+            //TODO: executar consulta de historico de veiculos.
             //TODO: armazenar no banco mysql o historico do veiculo.
             //TODO: para cada histórico gravado no banco gravar uma linha no arquivo tambem.
             //TODO: quando o arquivo chegar a 1000 linhas fechar o arquivo e gerar outro com nome sasCar_yyyyMMddHHmm_[sequencial].csv .

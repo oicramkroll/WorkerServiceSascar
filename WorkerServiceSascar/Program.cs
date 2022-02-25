@@ -21,6 +21,7 @@ namespace WorkerServiceSascar
                 {
                     services.AddHostedService<Worker>();
                     services.AddScoped<Services.IReportSVC, Services.ReportSVCService>();
+                    
                     //TODO:injeção de dependencia para o banco
                 });
     }
