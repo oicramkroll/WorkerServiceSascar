@@ -1,9 +1,13 @@
+@echo "Gerando dependencias"
+@echo off
 mkdir "c:/sascarService"
 xcopy "%~dp0worker\*" "c:\sascarService\." /s /y
 sc.exe create "svc worker sascar" binpath="c:/sascarService/WorkerServiceSascar.exe"
 
-"Inicializando servico"
+@echo "Inicializando servico"
 sc start "svc worker sascar"
+
+@echo off
 :loop
 sc.exe query "svc worker sascar"| find "RUNNING"
 if errorlevel 1 (
