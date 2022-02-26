@@ -17,16 +17,18 @@ namespace WorkerServiceSascar
                 .UseWindowsService()
                 .ConfigureServices((hostContext, services) =>
                 {
+                    services.AddDbContext<CarDbContext>(options =>
+                    options.UseMySql(
+                            ServerVersion.AutoDetect(
+                                    hostContext.Configuration.GetSection("ConnectionStrings:mySql").Value
+                                )
+                        )
+                    );
+
                     services.AddHostedService<Worker>();
                     services.AddScoped<Services.IReportSVC, Services.ReportSVCService>();
-
-                    services.AddDbContext<CarDbContext>(options =>
-                        options.UseMySql(
-                                ServerVersion.AutoDetect(
-                                        hostContext.Configuration.GetSection("ConnectionStrings:mySql").Value
-                                    )
-                            )
-                    );
+                    services.AddScoped<Data.IUnitOfWork, Data.UnitOfWork>();
+                    services.AddScoped(typeof(Data.IGenericRepository<>),typeof(Data.GenericRepository<>));
 
                 });
     }

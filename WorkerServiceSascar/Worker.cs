@@ -10,11 +10,11 @@ namespace WorkerServiceSascar
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
-        public IServiceProvider ServicesProvider { get; }
-        public Worker(ILogger<Worker> logger, IServiceProvider services)
+        private readonly IServiceProvider _serviceProvider;
+        public Worker(ILogger<Worker> logger, IServiceProvider serviceProvider)
         {
             _logger = logger;
-            ServicesProvider = services;
+            _serviceProvider = serviceProvider;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -23,9 +23,10 @@ namespace WorkerServiceSascar
             while (!stoppingToken.IsCancellationRequested)
             {
 
-                using (var scope = ServicesProvider.CreateScope())
+                using (IServiceScope scope = _serviceProvider.CreateScope())
                 {
-                    var _reportSVC = scope.ServiceProvider.GetRequiredService<Services.IReportSVC>();
+                    Services.IReportSVC _reportSVC =
+                        scope.ServiceProvider.GetRequiredService<Services.IReportSVC>();
 
                     var config = _reportSVC.GetConfigApp();
                     if (DateTime.Now.ToString("HH:mm") == config["horarioRotina"].ToString())
@@ -34,7 +35,7 @@ namespace WorkerServiceSascar
                     }
                 }
 
-                
+
                 await Task.Delay((1000*60), stoppingToken);
             }
         }

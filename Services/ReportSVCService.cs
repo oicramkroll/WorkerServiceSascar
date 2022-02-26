@@ -11,11 +11,13 @@ namespace Services
     public class ReportSVCService : IReportSVC
     {
         private readonly string currentDirectory;
-        private readonly CarDbContext dbContext;
-        public ReportSVCService(CarDbContext context)
+        private readonly IGenericRepository<Data.PosicaoVeiculo> _repoCar;
+        private readonly IUnitOfWork _unitOfWork;
+        public ReportSVCService(IGenericRepository<Data.PosicaoVeiculo> repoCar,IUnitOfWork unitOfWork)
         {
             currentDirectory = AppContext.BaseDirectory;
-            dbContext = context;
+            _repoCar = repoCar;
+            _unitOfWork = unitOfWork;
         }
         public void GenerateByDateInterval()
         {
@@ -70,22 +72,42 @@ namespace Services
             var cars = client.obterVeiculos(user,pwd,1000,0);
 
 
-            foreach (var item in cars.ToList())
+            foreach (var car in cars.ToList())
             {
-                var positions = client.obterPacotePosicaoHistorico(user, pwd, dateStart, dateEnd, item.idVeiculo);
+                var positions = client.obterPacotePosicaoHistorico(user, pwd, dateStart, dateEnd, car.idVeiculo);
 
                 foreach (var pos in positions.ToList())
                 {
                     //TODO: gerar arquivo para armazenar histórico na pasta de destino informada no arquivo de configuração com o nome sasCar_yyyyMMddHHmm_1.csv .
-                    var ig = pos.ignicao;
+
+                    var posExist = _repoCar.getAll().Any(x =>
+                    x.IDVEICULO == pos.idVeiculo &&
+                    x.PLACA == pos.placa &&
+                    x.DATAPOSICAO == pos.dataPosicao
+                    );
+                    if (!posExist)
+                    {
+                        _repoCar.save(new PosicaoVeiculo
+                        {
+                            IDVEICULO = pos.idVeiculo,
+                            PLACA = car.placa,
+                            DATAPOSICAO = pos.dataPosicao,
+                            ENDERECO = $"???",
+                            IGNICAO = pos.ignicao == 1,
+                            LATITURE = pos.latitude.ToString(),
+                            LONGITUTE = pos.longitude.ToString(),
+                            VELOCIDADE = pos.velocidade
+                        });
+                        _unitOfWork.commit();
+                    }
                     
                 }
 
 
                 //TODO: executar consulta de historico de veiculos.
                 //TODO: armazenar no banco mysql o historico do veiculo.
-                dbContext.Cars.Add(new Car() { IdCar = item.idVeiculo });
-                dbContext.SaveChanges();
+                //_repoCar.save( );
+                //dbContext.SaveChanges();
 
                 //TODO: para cada histórico gravado no banco gravar uma linha no arquivo tambem.
                 //TODO: quando o arquivo chegar a 1000 linhas fechar o arquivo e gerar outro com nome sasCar_yyyyMMddHHmm_[sequencial].csv .
