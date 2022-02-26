@@ -7,10 +7,10 @@ namespace Data
         public CarDbContext(DbContextOptions<CarDbContext> options) : base(options)
         {
         }
-        public DbSet<Car> Cars { get; set; }
+        public DbSet<RelatorioPosicoes> Cars { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Car>().HasKey("IdCar");
+            modelBuilder.Entity<RelatorioPosicoes>().HasKey("Id");
         }
     }
 

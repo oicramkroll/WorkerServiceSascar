@@ -68,28 +68,22 @@ namespace Services
             var client = new SASCAR.SasIntegraWSClient();
             
             var cars = client.obterVeiculos(user,pwd,1000,0);
-
-
+            
             foreach (var item in cars.ToList())
             {
+                //TODO: executar consulta de historico de veiculos.
                 var positions = client.obterPacotePosicaoHistorico(user, pwd, dateStart, dateEnd, item.idVeiculo);
 
                 foreach (var pos in positions.ToList())
                 {
                     //TODO: gerar arquivo para armazenar histórico na pasta de destino informada no arquivo de configuração com o nome sasCar_yyyyMMddHHmm_1.csv .
-                    var ig = pos.ignicao;
-                    
+                    //TODO: armazenar no banco mysql o historico do veiculo.
+                    dbContext.Cars.Add(new RelatorioPosicoes() { Id = item.idVeiculo });
+                    dbContext.SaveChanges();
+
+                    //TODO: para cada histórico gravado no banco gravar uma linha no arquivo tambem.
+                    //TODO: quando o arquivo chegar a 1000 linhas fechar o arquivo e gerar outro com nome sasCar_yyyyMMddHHmm_[sequencial].csv .
                 }
-
-
-                //TODO: executar consulta de historico de veiculos.
-                //TODO: armazenar no banco mysql o historico do veiculo.
-                dbContext.Cars.Add(new Car() { IdCar = item.idVeiculo });
-                dbContext.SaveChanges();
-
-                //TODO: para cada histórico gravado no banco gravar uma linha no arquivo tambem.
-                //TODO: quando o arquivo chegar a 1000 linhas fechar o arquivo e gerar outro com nome sasCar_yyyyMMddHHmm_[sequencial].csv .
-
             }
 
 
