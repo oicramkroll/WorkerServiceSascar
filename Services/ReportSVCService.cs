@@ -1,24 +1,25 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Data;
+using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
 
 namespace Services
 
 {
-    public class ReportSVCService:IReportSVC
+    public class ReportSVCService : IReportSVC
     {
         private readonly string currentDirectory;
-        public ReportSVCService()
+        private readonly CarDbContext dbContext;
+        public ReportSVCService(CarDbContext context)
         {
             currentDirectory = AppContext.BaseDirectory;
+            dbContext = context;
         }
         public void GenerateByDateInterval()
         {
-            
+
             DateTime startDate = GetInputDate(
                 "Data de inicio do relatorio com o fomrato 'AAAA-MM-DD 00:00:00'",
                 "Data inválida, tente novamente");
@@ -57,22 +58,37 @@ namespace Services
         public void Generate(DateTime start, DateTime end)
         {
             var configs = GetConfigApp();
+
+            var dirDestity = configs["DiretorioDestino"].ToString();
+            var user = configs["UserWS"]["Login"].ToString();
+            var pwd = configs["UserWS"]["Password"].ToString();
+            var dateStart = start.ToString("yyyy-MM-dd HH:mm:ss");
+            var dateEnd = end.ToString("yyyy-MM-dd HH:mm:ss");
+
             var client = new SASCAR.SasIntegraWSClient();
-            var cars = client.obterVeiculos(
-                configs["UserWS"]["Login"].ToString(),
-                configs["UserWS"]["Password"].ToString(),
-                1000,
-                0
-                );
+            
+            var cars = client.obterVeiculos(user,pwd,1000,0);
+
+
             foreach (var item in cars.ToList())
             {
-                var dirDestity = configs["DiretorioDestino"].ToString();
-            //TODO: gerar arquivo para armazenar histórico na pasta de destino informada no arquivo de configuração com o nome sasCar_yyyyMMddHHmm_1.csv .
-            //TODO: executar consulta de historico de veiculos.
-            //TODO: armazenar no banco mysql o historico do veiculo.
-            //TODO: para cada histórico gravado no banco gravar uma linha no arquivo tambem.
-            //TODO: quando o arquivo chegar a 1000 linhas fechar o arquivo e gerar outro com nome sasCar_yyyyMMddHHmm_[sequencial].csv .
+                var positions = client.obterPacotePosicaoHistorico(user, pwd, dateStart, dateEnd, item.idVeiculo);
 
+                foreach (var pos in positions.ToList())
+                {
+                    //TODO: gerar arquivo para armazenar histórico na pasta de destino informada no arquivo de configuração com o nome sasCar_yyyyMMddHHmm_1.csv .
+                    var ig = pos.ignicao;
+                    
+                }
+
+
+                //TODO: executar consulta de historico de veiculos.
+                //TODO: armazenar no banco mysql o historico do veiculo.
+                dbContext.Cars.Add(new Car() { IdCar = item.idVeiculo });
+                dbContext.SaveChanges();
+
+                //TODO: para cada histórico gravado no banco gravar uma linha no arquivo tambem.
+                //TODO: quando o arquivo chegar a 1000 linhas fechar o arquivo e gerar outro com nome sasCar_yyyyMMddHHmm_[sequencial].csv .
 
             }
 

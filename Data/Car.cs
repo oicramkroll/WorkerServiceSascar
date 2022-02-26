@@ -1,15 +1,8 @@
-﻿using System;
-
-namespace Data
+﻿namespace Data
 {
     public class Car
     {
-        public int CarId { get; set; }
+        public int IdCar { get; set; }
 
-        public string Model { get; set; }
-
-        public int Year { get; set; }
-
-        public string Manufacturer { get; set; }
     }
 }

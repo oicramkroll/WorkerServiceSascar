@@ -1,9 +1,7 @@
+using Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace WorkerServiceSascar
 {
@@ -21,8 +19,15 @@ namespace WorkerServiceSascar
                 {
                     services.AddHostedService<Worker>();
                     services.AddScoped<Services.IReportSVC, Services.ReportSVCService>();
-                    
-                    //TODO:injeção de dependencia para o banco
+
+                    services.AddDbContext<CarDbContext>(options =>
+                        options.UseMySql(
+                                ServerVersion.AutoDetect(
+                                        hostContext.Configuration.GetSection("ConnectionStrings:mySql").Value
+                                    )
+                            )
+                    );
+
                 });
     }
 }
