@@ -7,7 +7,7 @@ namespace Data
         public CarDbContext(DbContextOptions<CarDbContext> options) : base(options)
         {
         }
-        public DbSet<RelatorioPosicoes> Cars { get; set; }
+        public DbSet<RelatorioPosicoes> RelatorioPosicoes { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<RelatorioPosicoes>().HasKey("Id");
