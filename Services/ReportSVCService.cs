@@ -94,7 +94,7 @@ namespace Services
                         x.IDVEICULO == pos.idVeiculo &&
                         x.PLACA == pos.placa &&
                         x.DATAPOSICAO == pos.dataPosicao
-                        );
+                        ) ;
                         if (!posExist)
                         {
                             _repoCar.save(new PosicaoVeiculo
