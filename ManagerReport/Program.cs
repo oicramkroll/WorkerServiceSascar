@@ -1,5 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json.Linq;
 using System;
+using System.IO;
 using System.Threading;
 
 namespace ManagerReport
@@ -30,7 +34,21 @@ namespace ManagerReport
         }
         public static void ConfigureService(IServiceCollection services) {
             services.AddScoped<Services.IReportSVC, Services.ReportSVCService>();
-            //TODO:Injeção de dependencia para o banco de dados
+            services.AddScoped<Data.IUnitOfWork, Data.UnitOfWork>();
+            services.AddScoped(typeof(Data.IGenericRepository<>), typeof(Data.GenericRepository<>));
+            services.AddDbContext<CarDbContext>(options =>
+            {
+                var dir = AppContext.BaseDirectory;
+                JObject config;
+                using (StreamReader r = new StreamReader($"{dir}/appsettings.json"))
+                {
+                    string json = r.ReadToEnd();
+                    config = JObject.Parse(json);
+                }
+                options.UseMySql(
+                    config["ConnectionStrings"]["mySql"].ToString(),
+                    new MySqlServerVersion(new System.Version(8, 0, 27)));
+            });
         }
     }
 }

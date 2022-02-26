@@ -18,11 +18,11 @@ namespace WorkerServiceSascar
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddDbContext<CarDbContext>(options =>
-                    options.UseMySql(
-                            ServerVersion.AutoDetect(
-                                    hostContext.Configuration.GetSection("ConnectionStrings:mySql").Value
-                                )
-                        )
+                        {
+                            options.UseMySql(
+                                hostContext.Configuration.GetSection("ConnectionStrings:mySql").Value,
+                                new MySqlServerVersion(new System.Version(8, 0, 27)));
+                        }
                     );
 
                     services.AddHostedService<Worker>();

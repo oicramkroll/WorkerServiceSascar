@@ -32,7 +32,8 @@ namespace Services
                 "Data inválida, tente novamente");
 
             Generate(startDate, endDate);
-            Console.WriteLine("Ok");
+            Console.WriteLine("Precione enter para inicar novamente");
+            Console.ReadLine();
             Thread.Sleep(2000);
             Console.Clear();
         }
@@ -73,53 +74,51 @@ namespace Services
             
             var cars = client.obterVeiculos(user,pwd,1000,0);
 
-
+            //TODO: gerar arquivo para armazenar histórico na pasta de destino informada no arquivo de configuração com o nome sasCar_yyyyMMddHHmm_1.csv .
+            Console.WriteLine($"Preparando para verificar {cars.Count()} veiculos.");
             foreach (var car in cars.ToList())
             {
                 var positions = client.obterPacotePosicaoHistorico(user, pwd, dateStart, dateEnd, car.idVeiculo);
-
-                foreach (var pos in positions.ToList())
+                if (positions != null)
                 {
-                    //TODO: gerar arquivo para armazenar histórico na pasta de destino informada no arquivo de configuração com o nome sasCar_yyyyMMddHHmm_1.csv .
-
-                    var posExist = _repoCar.getAll().Any(x =>
-                    x.IDVEICULO == pos.idVeiculo &&
-                    x.PLACA == pos.placa &&
-                    x.DATAPOSICAO == pos.dataPosicao
-                    );
-                    if (!posExist)
+                    Console.WriteLine($"Recuperando Posicao do carro, placa: {car.placa}: id:{car.idVeiculo}");
+                    Console.WriteLine($"...");
+                    var total = positions.Count();
+                    
+                    foreach (var pos in positions.ToList())
                     {
-                        _repoCar.save(new PosicaoVeiculo
+                        var index = positions.ToList().FindIndex(x=>x == pos);
+                        Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
+                        Console.WriteLine($"{((index*100)/total)}%");
+                        var posExist = _repoCar.getAll().Any(x =>
+                        x.IDVEICULO == pos.idVeiculo &&
+                        x.PLACA == pos.placa &&
+                        x.DATAPOSICAO == pos.dataPosicao
+                        );
+                        if (!posExist)
                         {
-                            IDVEICULO = pos.idVeiculo,
-                            PLACA = car.placa,
-                            DATAPOSICAO = pos.dataPosicao,
-                            ENDERECO = $"???",
-                            IGNICAO = pos.ignicao == 1,
-                            LATITURE = pos.latitude.ToString(),
-                            LONGITUTE = pos.longitude.ToString(),
-                            VELOCIDADE = pos.velocidade
-                        });
-                        _unitOfWork.commit();
+                            _repoCar.save(new PosicaoVeiculo
+                            {
+                                IDVEICULO = pos.idVeiculo,
+                                PLACA = car.placa,
+                                DATAPOSICAO = pos.dataPosicao,
+                                ENDERECO = $"UF: {pos.uf}, Cidade: {pos.cidade}, Rua: {pos.rua}",
+                                IGNICAO = pos.ignicao == 1,
+                                LATITURE = pos.latitude.ToString(),
+                                LONGITUTE = pos.longitude.ToString(),
+                                VELOCIDADE = pos.velocidade
+                            });
+                            _unitOfWork.commit();
+                            //TODO:Armazenar arquivo ate gerar a 1000 linhas, e depois gerar outro
+                        }
+
                     }
-                    
                 }
-
-
-                //TODO: executar consulta de historico de veiculos.
-                //TODO: armazenar no banco mysql o historico do veiculo.
-                //_repoCar.save( );
-                //dbContext.SaveChanges();
-
-                    //TODO: para cada histórico gravado no banco gravar uma linha no arquivo tambem.
-                    
-                    //TODO: quando o arquivo chegar a 1000 linhas fechar o arquivo
-                    //e gerar outro com nome sasCar_yyyyMMddHHmm_[sequencial].csv .
+                else {
+                    Console.WriteLine($"Não existem posicoes para o veiculo com placa: {car.placa}: id:{car.idVeiculo}");
                 }
             }
-
-
-            Console.WriteLine("Relátorio Gerado com sucesso");
+            Console.WriteLine("Processo finalizado com sucesso");
         }
 
         public JObject GetConfigApp()

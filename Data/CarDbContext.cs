@@ -6,6 +6,7 @@ namespace Data
     {
         public CarDbContext(DbContextOptions<CarDbContext> options) : base(options)
         {
+
         }
         public DbSet<PosicaoVeiculo> posicaoVeiculos { get; set; }
         
