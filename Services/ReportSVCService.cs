@@ -1,6 +1,8 @@
 ﻿using Data;
+using FileHelpers;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -109,9 +111,11 @@ namespace Services
                 //_repoCar.save( );
                 //dbContext.SaveChanges();
 
-                //TODO: para cada histórico gravado no banco gravar uma linha no arquivo tambem.
-                //TODO: quando o arquivo chegar a 1000 linhas fechar o arquivo e gerar outro com nome sasCar_yyyyMMddHHmm_[sequencial].csv .
-
+                    //TODO: para cada histórico gravado no banco gravar uma linha no arquivo tambem.
+                    
+                    //TODO: quando o arquivo chegar a 1000 linhas fechar o arquivo
+                    //e gerar outro com nome sasCar_yyyyMMddHHmm_[sequencial].csv .
+                }
             }
 
 
