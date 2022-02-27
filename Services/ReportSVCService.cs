@@ -128,20 +128,22 @@ namespace Services
                                         VELOCIDADE = pos.velocidade
                                     });
                                 }
-
+                                //TODO:Armazenar arquivo ate gerar a 1000 linhas, e depois gerar outro. utilizar variavel `car` para placa
                             }
-                            
+
                         }
                         else {
                             Console.WriteLine($" | Sem Registros");
                         }
+                        
+
                         //registrando
                         if (listPosition.Count>0)
                         {
                             Console.WriteLine("Registrando no banco de dados...");
                             _repoCar.saveRange(listPosition);
                             _unitOfWork.commit();
-                            //TODO:Armazenar arquivo ate gerar a 1000 linhas, e depois gerar outro
+                            
                         }
                     }
                     else
