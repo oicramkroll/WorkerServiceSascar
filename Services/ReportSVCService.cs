@@ -67,56 +67,94 @@ namespace Services
             var dirDestity = configs["DiretorioDestino"].ToString();
             var user = configs["UserWS"]["Login"].ToString();
             var pwd = configs["UserWS"]["Password"].ToString();
-            var dateStart = start.ToString("yyyy-MM-dd HH:mm:ss");
-            var dateEnd = end.ToString("yyyy-MM-dd HH:mm:ss");
+            
 
             var client = new SASCAR.SasIntegraWSClient();
-            
             var cars = client.obterVeiculos(user,pwd,1000,0);
 
-            //TODO: gerar arquivo para armazenar histórico na pasta de destino informada no arquivo de configuração com o nome sasCar_yyyyMMddHHmm_1.csv .
+            
             Console.WriteLine($"Preparando para verificar {cars.Count()} veiculos.");
             foreach (var car in cars.ToList())
             {
-                var positions = client.obterPacotePosicaoHistorico(user, pwd, dateStart, dateEnd, car.idVeiculo);
-                if (positions != null)
+                Console.WriteLine(" ... "); 
+                Console.WriteLine($"Recuperar dados do Veiculo, placa: {car.placa}, id:{car.idVeiculo} ");
+                //TODO: gerar arquivo por carro para armazenar histórico na pasta de destino informada no arquivo de configuração com o nome sasCar_yyyyMMddHHmm_1.csv .
+                //percorrer dia por dia até a data final
+                var nDateEnd = start.AddDays(1);
+                var nDateStar = start;
+                var notSameDate = true;
+                while (notSameDate)
                 {
-                    Console.WriteLine($"Recuperando Posicao do carro, placa: {car.placa}: id:{car.idVeiculo}");
-                    Console.WriteLine($"...");
-                    var total = positions.Count();
-                    
-                    foreach (var pos in positions.ToList())
+                    nDateEnd = nDateStar.AddDays(1);
+                    Console.Write($"De {nDateStar.ToString("yyyy-MM-dd HH:mm:ss")} até {nDateEnd.ToString("yyyy-MM-dd HH:mm:ss")}");
+                    if (nDateEnd <= end)
                     {
-                        var index = positions.ToList().FindIndex(x=>x == pos);
-                        Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
-                        Console.WriteLine($"{((index*100)/total)}%");
-                        var posExist = _repoCar.getAll().Any(x =>
-                        x.IDVEICULO == pos.idVeiculo &&
-                        x.PLACA == pos.placa &&
-                        x.DATAPOSICAO == pos.dataPosicao
-                        ) ;
-                        if (!posExist)
+                        var positions = client.obterPacotePosicaoHistorico(user, pwd,
+                            nDateStar.ToString("yyyy-MM-dd HH:mm:ss"), 
+                            nDateEnd.ToString("yyyy-MM-dd HH:mm:ss"), 
+                            car.idVeiculo);
+                        var listPosition = new List<PosicaoVeiculo>();
+                        if (positions != null)
                         {
-                            _repoCar.save(new PosicaoVeiculo
+                            Console.WriteLine();
+                            Console.WriteLine($"{positions.Count()} posições encontradas.");
+                            Console.WriteLine($"...");
+                            var total = positions.Count();
+
+                            foreach (var pos in positions.ToList())
                             {
-                                IDVEICULO = pos.idVeiculo,
-                                PLACA = car.placa,
-                                DATAPOSICAO = pos.dataPosicao,
-                                ENDERECO = $"UF: {pos.uf}, Cidade: {pos.cidade}, Rua: {pos.rua}",
-                                IGNICAO = pos.ignicao == 1,
-                                LATITURE = pos.latitude.ToString(),
-                                LONGITUTE = pos.longitude.ToString(),
-                                VELOCIDADE = pos.velocidade
-                            });
+                                var index = positions.ToList().FindIndex(x => x == pos);
+                                var posExist = _repoCar.getAll().Any(x =>
+                                    x.IDVEICULO == pos.idVeiculo &&
+                                    x.PLACA == car.placa &&
+                                    x.DATAPOSICAO == pos.dataPosicao
+                                );
+                                
+                                Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
+                                Console.WriteLine($"Armazenando: {(((index * 100) / total)+1)}%. placa:{car.placa}, existe: {(posExist?"sim":"nao")}");
+                                
+                                
+                                if (!posExist)
+                                {
+                                    listPosition.Add(new PosicaoVeiculo
+                                    {
+                                        IDVEICULO = pos.idVeiculo,
+                                        PLACA = car.placa,
+                                        DATAPOSICAO = pos.dataPosicao,
+                                        ENDERECO = $"UF: {pos.uf}, Cidade: {pos.cidade}, Rua: {pos.rua}",
+                                        IGNICAO = pos.ignicao == 1,
+                                        LATITURE = pos.latitude.ToString(),
+                                        LONGITUTE = pos.longitude.ToString(),
+                                        VELOCIDADE = pos.velocidade
+                                    });
+                                }
+
+                            }
+                            
+                        }
+                        else {
+                            Console.WriteLine($" | Sem Registros");
+                        }
+                        //registrando
+                        if (listPosition.Count>0)
+                        {
+                            Console.WriteLine("Registrando no banco de dados...");
+                            _repoCar.saveRange(listPosition);
                             _unitOfWork.commit();
                             //TODO:Armazenar arquivo ate gerar a 1000 linhas, e depois gerar outro
                         }
-
                     }
+                    else
+                    {
+                        notSameDate = false;
+                        Console.WriteLine($"Não existem posicoes para o veiculo com placa: {car.placa}: id:{car.idVeiculo}");
+                        //TODO: cancelar o armazenamento do arquivo
+                    }
+                    nDateStar = nDateStar.AddDays(1);
+                    
                 }
-                else {
-                    Console.WriteLine($"Não existem posicoes para o veiculo com placa: {car.placa}: id:{car.idVeiculo}");
-                }
+                Thread.Sleep(2000);
+                Console.Clear();
             }
             Console.WriteLine("Processo finalizado com sucesso");
         }

@@ -15,6 +15,7 @@ namespace Data
         T getByPk(params object[] id);
         Task<T> getByPkAsync(params object[] id);
         void save(T entity);
+        void saveRange(List<T> entity);
         void update(T entity);
         void delete(T entity);
 

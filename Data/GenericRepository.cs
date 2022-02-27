@@ -52,6 +52,15 @@ namespace Data
             }
             _entities.Add(entity);
         }
+        public void saveRange(List<T> entity)
+        {
+            var local = getAll().FirstOrDefault();
+            if (local != null)
+            {
+                _context.Entry(local).State = EntityState.Detached;
+            }
+            _entities.AddRange(entity);
+        }
 
         public void update(T entity)
         {
