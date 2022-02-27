@@ -174,18 +174,29 @@ namespace Services
                 //arquivo de configuração com o nome sasCar_[placa]_yyyyMMddHHmm_[sequencial].csv .
                 //quando o arquivo estiver com 1000 linhas é necessário gerar outro com o sequencial
 
-                //for (int i = 0; i < listPositionCSV.Count / configs["QuantidadeLinhasPorArquivo"].Value<int>(); i++)
-                //{
-
+               
                 try
                 {
                     if (!Directory.Exists(dirDestity))
                     {
                         Directory.CreateDirectory(dirDestity);
+                    }
+
+
+                    var totalLinhas = listPositionCSV.Count();
+                    var pageSize = 1000;
+                    var totalPages = (int)Math.Ceiling(((double)totalLinhas / pageSize));
+                    for (int i = 0; i < totalPages; i++)
+                    {
+                        var skip = (i) * pageSize;
+                        var results = listPositionCSV.Skip(skip).Take(pageSize).ToList();
 
                         var engine = new FileHelperEngine<PosicaoVeiculoCSV>();
-                        engine.WriteFile($"{dirDestity}/sasCar_{car.placa}_{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}_{1}.csv", listPositionCSV);
+                        engine.HeaderText = engine.GetFileHeader();
+                        engine.WriteFile($"{dirDestity}/sasCar_{car.placa}_{start.ToString("ddMMyyyy")}_{end.ToString("ddMMyyyy")}_{DateTime.Now.ToString("yyyyMMddHHmmss")}_{(i + 1)}.csv", results);
                     }
+
+                   
                 }
                 catch (Exception ex)
                 {
