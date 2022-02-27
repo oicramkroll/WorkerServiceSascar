@@ -78,11 +78,13 @@ namespace Services
             {
                 Console.WriteLine(" ... "); 
                 Console.WriteLine($"Recuperar dados do Veiculo, placa: {car.placa}, id:{car.idVeiculo} ");
-                //TODO: gerar arquivo por carro para armazenar histórico na pasta de destino informada no arquivo de configuração com o nome sasCar_yyyyMMddHHmm_1.csv .
-                //percorrer dia por dia até a data final
+                //TODO: Criar Listagem para o armazenamento do arquivo aqui
+                
                 var nDateEnd = start.AddDays(1);
                 var nDateStar = start;
                 var notSameDate = true;
+
+                //verifica dia a dia se existem registros para o veiculo
                 while (notSameDate)
                 {
                     nDateEnd = nDateStar.AddDays(1);
@@ -128,7 +130,7 @@ namespace Services
                                         VELOCIDADE = pos.velocidade
                                     });
                                 }
-                                //TODO:Armazenar arquivo ate gerar a 1000 linhas, e depois gerar outro. utilizar variavel `car` para placa
+                                //TODO: Acumular listagem de arquivo aqui. utilizar variavel `car` para placa
                             }
 
                         }
@@ -136,7 +138,6 @@ namespace Services
                             Console.WriteLine($" | Sem Registros");
                         }
                         
-
                         //registrando
                         if (listPosition.Count>0)
                         {
@@ -150,11 +151,15 @@ namespace Services
                     {
                         notSameDate = false;
                         Console.WriteLine($"Não existem posicoes para o veiculo com placa: {car.placa}: id:{car.idVeiculo}");
-                        //TODO: cancelar o armazenamento do arquivo
                     }
                     nDateStar = nDateStar.AddDays(1);
                     
                 }
+
+                //TODO: gerar arquivo por carro para armazenar histórico na pasta de destino informada no
+                //arquivo de configuração com o nome sasCar_[placa]_yyyyMMddHHmm_[sequencial].csv .
+                //quando o arquivo estiver com 1000 linhas é necessário gerar outro com o sequencial
+
                 Thread.Sleep(2000);
                 Console.Clear();
             }
