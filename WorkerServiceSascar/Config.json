@@ -4,6 +4,7 @@
     "Password": "v1ct@321"
   },
   "horarioRotina": "06:00",
-  "DiretorioDestino": "c:\\temp"
+  "DiretorioDestino": "c:\\temp",
+  "QuantidadeLinhasPorArquivo": 1000
 
 }

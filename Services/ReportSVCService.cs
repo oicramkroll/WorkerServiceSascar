@@ -15,7 +15,7 @@ namespace Services
         private readonly string currentDirectory;
         private readonly IGenericRepository<Data.PosicaoVeiculo> _repoCar;
         private readonly IUnitOfWork _unitOfWork;
-        public ReportSVCService(IGenericRepository<Data.PosicaoVeiculo> repoCar,IUnitOfWork unitOfWork)
+        public ReportSVCService(IGenericRepository<Data.PosicaoVeiculo> repoCar, IUnitOfWork unitOfWork)
         {
             currentDirectory = AppContext.BaseDirectory;
             _repoCar = repoCar;
@@ -67,22 +67,25 @@ namespace Services
             var dirDestity = configs["DiretorioDestino"].ToString();
             var user = configs["UserWS"]["Login"].ToString();
             var pwd = configs["UserWS"]["Password"].ToString();
-            
+
 
             var client = new SASCAR.SasIntegraWSClient();
-            var cars = client.obterVeiculos(user,pwd,1000,0);
+            var cars = client.obterVeiculos(user, pwd, 1000, 0);
 
-            
+
             Console.WriteLine($"Preparando para verificar {cars.Count()} veiculos.");
             foreach (var car in cars.ToList())
             {
-                Console.WriteLine(" ... "); 
+                Console.WriteLine(" ... ");
                 Console.WriteLine($"Recuperar dados do Veiculo, placa: {car.placa}, id:{car.idVeiculo} ");
-                //TODO: gerar arquivo por carro para armazenar histórico na pasta de destino informada no arquivo de configuração com o nome sasCar_yyyyMMddHHmm_1.csv .
-                //percorrer dia por dia até a data final
+                //TODO: Criar Listagem para o armazenamento do arquivo aqui
+                var listPositionCSV = new List<PosicaoVeiculoCSV>();
+
                 var nDateEnd = start.AddDays(1);
                 var nDateStar = start;
                 var notSameDate = true;
+
+                //verifica dia a dia se existem registros para o veiculo
                 while (notSameDate)
                 {
                     nDateEnd = nDateStar.AddDays(1);
@@ -90,8 +93,8 @@ namespace Services
                     if (nDateEnd <= end)
                     {
                         var positions = client.obterPacotePosicaoHistorico(user, pwd,
-                            nDateStar.ToString("yyyy-MM-dd HH:mm:ss"), 
-                            nDateEnd.ToString("yyyy-MM-dd HH:mm:ss"), 
+                            nDateStar.ToString("yyyy-MM-dd HH:mm:ss"),
+                            nDateEnd.ToString("yyyy-MM-dd HH:mm:ss"),
                             car.idVeiculo);
                         var listPosition = new List<PosicaoVeiculo>();
                         if (positions != null)
@@ -109,10 +112,10 @@ namespace Services
                                     x.PLACA == car.placa &&
                                     x.DATAPOSICAO == pos.dataPosicao
                                 );
-                                
+
                                 Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
-                               
-                                Console.WriteLine($"Posicao:{index}, Placa:{car.placa}, existnte no banco: {(posExist?"sim":"nao")} {(((index * 100) / total) + 1)}%");
+
+                                Console.WriteLine($"Posicao:{index}, Placa:{car.placa}, existnte no banco: {(posExist ? "sim" : "nao")} {(((index * 100) / total) + 1)}%");
                                 if (!posExist)
                                 {
 
@@ -129,30 +132,79 @@ namespace Services
                                     });
                                 }
 
+                                //TODO: Acumular listagem de arquivo aqui. utilizar variavel `car` para placa
+                                listPositionCSV.Add(new PosicaoVeiculoCSV
+                                {
+                                    IDVEICULO = pos.idVeiculo,
+                                    PLACA = car.placa,
+                                    DATAPOSICAO = pos.dataPosicao,
+                                    ENDERECO = $"UF: {pos.uf}, Cidade: {pos.cidade}, Rua: {pos.rua}",
+                                    IGNICAO = pos.ignicao == 1,
+                                    LATITURE = pos.latitude.ToString(),
+                                    LONGITUTE = pos.longitude.ToString(),
+                                    VELOCIDADE = pos.velocidade
+                                });
                             }
-                            
+
                         }
-                        else {
+                        else
+                        {
                             Console.WriteLine($" | Sem Registros");
                         }
+
                         //registrando
-                        if (listPosition.Count>0)
+                        if (listPosition.Count > 0)
                         {
                             Console.WriteLine("Registrando no banco de dados...");
                             _repoCar.saveRange(listPosition);
                             _unitOfWork.commit();
-                            //TODO:Armazenar arquivo ate gerar a 1000 linhas, e depois gerar outro
+
                         }
                     }
                     else
                     {
                         notSameDate = false;
                         Console.WriteLine($"Não existem posicoes para o veiculo com placa: {car.placa}: id:{car.idVeiculo}");
-                        //TODO: cancelar o armazenamento do arquivo
                     }
                     nDateStar = nDateStar.AddDays(1);
-                    
+
                 }
+
+                //TODO: gerar arquivo por carro para armazenar histórico na pasta de destino informada no
+                //arquivo de configuração com o nome sasCar_[placa]_yyyyMMddHHmm_[sequencial].csv .
+                //quando o arquivo estiver com 1000 linhas é necessário gerar outro com o sequencial
+
+               
+                try
+                {
+                    if (!Directory.Exists(dirDestity))
+                    {
+                        Directory.CreateDirectory(dirDestity);
+                    }
+
+
+                    var totalLinhas = listPositionCSV.Count();
+                    var pageSize = 1000;
+                    var totalPages = (int)Math.Ceiling(((double)totalLinhas / pageSize));
+                    for (int i = 0; i < totalPages; i++)
+                    {
+                        var skip = (i) * pageSize;
+                        var results = listPositionCSV.Skip(skip).Take(pageSize).ToList();
+
+                        var engine = new FileHelperEngine<PosicaoVeiculoCSV>();
+                        engine.HeaderText = engine.GetFileHeader();
+                        engine.WriteFile($"{dirDestity}/sasCar_{car.placa}_{start.ToString("ddMMyyyy")}_{end.ToString("ddMMyyyy")}_{DateTime.Now.ToString("yyyyMMddHHmmss")}_{(i + 1)}.csv", results);
+                    }
+
+                   
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+                //}
+
                 Thread.Sleep(2000);
                 Console.Clear();
             }

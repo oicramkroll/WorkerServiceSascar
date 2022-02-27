@@ -29,10 +29,10 @@ namespace WorkerServiceSascar
                         scope.ServiceProvider.GetRequiredService<Services.IReportSVC>();
 
                     var config = _reportSVC.GetConfigApp();
-                    if (DateTime.Now.ToString("HH:mm") == config["horarioRotina"].ToString())
-                    {
+                    //if (DateTime.Now.ToString("HH:mm") == config["horarioRotina"].ToString())
+                    //{
                         _reportSVC.Generate(DateTime.Now.AddDays(-1), DateTime.Now);
-                    }
+                    //}
                 }
 
 
