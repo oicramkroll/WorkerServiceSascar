@@ -111,11 +111,11 @@ namespace Services
                                 );
                                 
                                 Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
-                                Console.WriteLine($"Armazenando: {(((index * 100) / total)+1)}%. placa:{car.placa}, existe: {(posExist?"sim":"nao")}");
-                                
-                                
+                               
+                                Console.WriteLine($"Posicao:{index}, Placa:{car.placa}, existnte no banco: {(posExist?"sim":"nao")} {(((index * 100) / total) + 1)}%");
                                 if (!posExist)
                                 {
+
                                     listPosition.Add(new PosicaoVeiculo
                                     {
                                         IDVEICULO = pos.idVeiculo,
