@@ -17,5 +17,6 @@ sc.exe delete "svc worker sascar"
 @echo off
 rmdir /S /Q "c:\sascarService"
 del /S /Q "%USERPROFILE%\Desktop\SasCarReport.lnk"
+del /S /Q "%USERPROFILE%\Desktop\ConfigFile.lnk"
 
 pause "servico removido"

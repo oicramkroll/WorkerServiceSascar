@@ -25,10 +25,10 @@ namespace Services
         {
 
             DateTime startDate = GetInputDate(
-                "Data de inicio do relatorio com o fomrato 'AAAA-MM-DD 00:00:00'",
+                "Data de inicio do relatorio com o fomrato 'AAAA-MM-DD 00:00:00' (Horario opcional)",
                 "Data inválida, tente novamente");
             DateTime endDate = GetInputDate(
-                "Data de Fim do relatorio com o fomrato 'AAAA-MM-DD 00:00:00'",
+                "Data de Fim do relatorio com o fomrato 'AAAA-MM-DD 00:00:00' (Horario opcional)",
                 "Data inválida, tente novamente");
 
             Generate(startDate, endDate);
@@ -193,7 +193,7 @@ namespace Services
 
                         var engine = new FileHelperEngine<PosicaoVeiculoCSV>();
                         engine.HeaderText = engine.GetFileHeader();
-                        engine.WriteFile($"{dirDestity}/sasCar_{car.placa}_{start.ToString("ddMMyyyy")}_{end.ToString("ddMMyyyy")}_{DateTime.Now.ToString("yyyyMMddHHmmss")}_{(i + 1)}.csv", results);
+                        engine.WriteFile($"{dirDestity}/sasCar_{car.placa}_{nDateStar.ToString("ddMMyyyy")}_{nDateEnd.ToString("ddMMyyyy")}_{DateTime.Now.ToString("yyyyMMddHHmmss")}_{(i + 1)}.csv", results);
                     }
 
                    
