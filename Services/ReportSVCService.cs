@@ -132,7 +132,6 @@ namespace Services
                                     });
                                 }
 
-                                //TODO: Acumular listagem de arquivo aqui. utilizar variavel `car` para placa
                                 listPositionCSV.Add(new PosicaoVeiculoCSV
                                 {
                                     IDVEICULO = pos.idVeiculo,
@@ -155,6 +154,7 @@ namespace Services
                         //registrando
                         if (listPosition.Count > 0)
                         {
+                            Console.WriteLine();
                             Console.WriteLine("Registrando no banco de dados...");
                             _repoCar.saveRange(listPosition);
                             _unitOfWork.commit();
@@ -164,17 +164,11 @@ namespace Services
                     else
                     {
                         notSameDate = false;
-                        Console.WriteLine($"Não existem posicoes para o veiculo com placa: {car.placa}: id:{car.idVeiculo}");
                     }
                     nDateStar = nDateStar.AddDays(1);
 
                 }
 
-                //TODO: gerar arquivo por carro para armazenar histórico na pasta de destino informada no
-                //arquivo de configuração com o nome sasCar_[placa]_yyyyMMddHHmm_[sequencial].csv .
-                //quando o arquivo estiver com 1000 linhas é necessário gerar outro com o sequencial
-
-               
                 try
                 {
                     if (!Directory.Exists(dirDestity))
@@ -193,7 +187,10 @@ namespace Services
 
                         var engine = new FileHelperEngine<PosicaoVeiculoCSV>();
                         engine.HeaderText = engine.GetFileHeader();
-                        engine.WriteFile($"{dirDestity}/sasCar_{car.placa}_{nDateStar.ToString("ddMMyyyy")}_{nDateEnd.ToString("ddMMyyyy")}_{DateTime.Now.ToString("yyyyMMddHHmmss")}_{(i + 1)}.csv", results);
+                        var fileName = $"sasCar_{car.placa}_{nDateStar.ToString("ddMMyyyy")}_{nDateEnd.ToString("ddMMyyyy")}_{DateTime.Now.ToString("yyyyMMddHHmmss")}_{(i + 1)}.csv";
+                        Console.WriteLine();
+                        Console.WriteLine($"Gerando arquivo {fileName}");
+                        engine.WriteFile($"{dirDestity}/{fileName}", results);
                     }
 
                    
@@ -205,7 +202,7 @@ namespace Services
                 }
                 //}
 
-                Thread.Sleep(2000);
+                Thread.Sleep(3000);
                 Console.Clear();
             }
             Console.WriteLine("Processo finalizado com sucesso");
